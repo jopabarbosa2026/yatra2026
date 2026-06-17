@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yatra India e Nepal 2026 — uma peregrinação ao Ganges e ao Himalaia</title>
+<meta name="description" content="16 dias pelos templos vivos do Nepal e da Índia, conduzidos por Yuri D. Wolf. Assista ao vídeo e entenda por que isto não é uma viagem — é um reencontro." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --ink:#15100B;          /* candlelit near-black */
+    --ink-2:#1E160E;        /* lifted dark panel */
+    --parch:#EFE3CB;        /* warm parchment */
+    --parch-2:#E7D8B9;      /* deeper parchment */
+    --bone:#F4ECDA;
+    --saffron:#E8932E;      /* marigold */
+    --saffron-soft:#F0B566;
+    --vermilion:#B23A2E;    /* sindoor red */
+    --gold:#CBA24B;
+    --text-dark:#2A2014;    /* on parchment */
+    --text-dark-soft:#5B4A33;
+    --text-light:#ECE0CB;   /* on ink */
+    --text-light-soft:#B7A684;
+    --line-gold:rgba(203,162,75,.32);
+    --maxw:1080px;
+    --display:"Fraunces", Georgia, serif;
+    --body:"Inter", system-ui, sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    background:var(--ink);
+    color:var(--text-light);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--saffron);color:var(--ink)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px;margin-left:auto;margin-right:auto}
+
+  /* eyebrow / typography helpers */
+  .eyebrow{
+    font-family:var(--body);
+    font-size:.72rem;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--saffron);
+    display:inline-block;
+  }
+  .eyebrow.dark{color:var(--vermilion)}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+  h2{font-size:clamp(1.9rem,4.6vw,3rem);margin:.5rem 0 1.2rem}
+  p{font-size:clamp(1rem,1.4vw,1.12rem)}
+  .lede{font-size:clamp(1.08rem,1.7vw,1.28rem);color:var(--text-light-soft)}
+  em.word{font-style:italic;color:var(--saffron-soft)}
+
+  /* sanskrit divider */
+  .glyph{
+    text-align:center;
+    color:var(--line-gold);
+    font-family:var(--display);
+    font-size:1.4rem;
+    letter-spacing:.4em;
+    margin:0 auto;
+    user-select:none;
+  }
+
+  /* ============ SECTION SHELLS ============ */
+  section{position:relative}
+  .s-dark{background:var(--ink);color:var(--text-light);padding:clamp(72px,11vw,140px) 0}
+  .s-darker{background:var(--ink-2);color:var(--text-light);padding:clamp(72px,11vw,140px) 0}
+  .s-light{background:var(--parch);color:var(--text-dark);padding:clamp(72px,11vw,140px) 0}
+  .s-light h2{color:var(--text-dark)}
+  .s-light p{color:var(--text-dark-soft)}
+  .s-light .lede{color:var(--text-dark-soft)}
+  .s-light em.word{color:var(--vermilion)}
+
+  /* ============ HEADER ============ */
+  .topbar{
+    position:absolute;top:0;left:0;right:0;z-index:30;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 24px;max-width:var(--maxw);margin:0 auto;
+  }
+  .brandmark{font-family:var(--display);font-size:1.05rem;letter-spacing:.04em;color:var(--text-light)}
+  .brandmark span{color:var(--saffron)}
+  .topbar a.mini{
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-light-soft);
+    text-decoration:none;border-bottom:1px solid transparent;transition:.25s;
+  }
+  .topbar a.mini:hover{color:var(--saffron);border-color:var(--saffron)}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:130px 24px 90px;
+    text-align:center;
+    background:
+      radial-gradient(120% 90% at 50% -10%, rgba(232,147,46,.16), transparent 55%),
+      radial-gradient(90% 70% at 50% 120%, rgba(178,58,46,.18), transparent 60%),
+      linear-gradient(180deg,#120D08 0%, #1A130C 60%, #15100B 100%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(203,162,75,.06) 1px, transparent 0);
+    background-size:34px 34px;opacity:.5;pointer-events:none;
+  }
+  .hero .inner{position:relative;z-index:2;max-width:920px;margin:0 auto}
+  .hero .eyebrow{margin-bottom:18px}
+  .hero h1{
+    font-size:clamp(2.7rem,8vw,5.4rem);
+    font-weight:500;
+    letter-spacing:-.02em;
+    line-height:.98;
+    background:linear-gradient(180deg,#F6ECD6 0%, #E9CF9B 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:18px;
+  }
+  .hero .sub{
+    color:var(--text-light-soft);
+    max-width:600px;margin:0 auto 14px;
+    font-size:clamp(1.02rem,1.8vw,1.22rem);
+  }
+
+  /* darshan video frame — the signature element */
+  .darshan{position:relative;max-width:760px;margin:46px auto 26px}
+  .finial{
+    width:14px;height:14px;border-radius:50%;
+    background:radial-gradient(circle at 40% 35%, #FBE3AF, var(--gold));
+    margin:0 auto -6px;position:relative;z-index:3;
+    box-shadow:0 0 18px rgba(203,162,75,.7);
+  }
+  .finial::after{
+    content:"";position:absolute;left:50%;top:12px;transform:translateX(-50%);
+    width:2px;height:14px;background:linear-gradient(var(--gold),transparent);
+  }
+  .frame{
+    position:relative;
+    border:1.5px solid var(--line-gold);
+    border-radius:200px 200px 16px 16px;
+    padding:14px;
+    background:linear-gradient(180deg, rgba(203,162,75,.10), rgba(20,15,10,.4));
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,.4) inset,
+      0 30px 90px -30px rgba(232,147,46,.45),
+      0 10px 40px rgba(0,0,0,.55);
+  }
+  .screen{
+    position:relative;
+    border-radius:186px 186px 8px 8px;
+    overflow:hidden;
+    aspect-ratio:16/9;
+    background:
+      radial-gradient(120% 120% at 50% 0%, #3a2a17, #160f08 70%);
+    cursor:pointer;
+  }
+  .screen .poster{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(80% 60% at 50% 28%, rgba(232,147,46,.35), transparent 60%),
+      linear-gradient(180deg,#23170d,#0e0a06);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    transition:opacity .4s ease;
+  }
+  .play{
+    width:84px;height:84px;border-radius:50%;
+    background:radial-gradient(circle at 38% 32%, var(--saffron-soft), var(--saffron));
+    display:grid;place-items:center;
+    box-shadow:0 0 0 0 rgba(232,147,46,.55);
+    animation:pulse 2.6s infinite ease-out;
+    transition:transform .25s;
+  }
+  .screen:hover .play{transform:scale(1.06)}
+  .play::after{
+    content:"";display:block;
+    border-left:26px solid var(--ink);
+    border-top:16px solid transparent;border-bottom:16px solid transparent;
+    margin-left:6px;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(232,147,46,.5)}
+    70%{box-shadow:0 0 0 26px rgba(232,147,46,0)}
+    100%{box-shadow:0 0 0 0 rgba(232,147,46,0)}
+  }
+  .poster .cap{font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron-soft)}
+  .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .play-nudge{color:var(--text-light-soft);font-size:.98rem;max-width:520px;margin:0 auto 30px}
+  .play-nudge strong{color:var(--text-light)}
+
+  /* ============ BUTTONS ============ */
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:var(--body);font-weight:600;font-size:1rem;
+    padding:16px 30px;border-radius:999px;text-decoration:none;cursor:pointer;
+    border:1.5px solid transparent;transition:transform .2s, box-shadow .25s, background .25s, color .25s;
+    letter-spacing:.01em;
+  }
+  .btn-primary{
+    background:linear-gradient(180deg,var(--saffron),#D77E1E);
+    color:#1A1206;
+    box-shadow:0 14px 34px -12px rgba(232,147,46,.7);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px rgba(232,147,46,.85)}
+  .btn-ghost{border-color:var(--line-gold);color:var(--text-light);background:transparent}
+  .btn-ghost:hover{border-color:var(--saffron);color:var(--saffron)}
+  .s-light .btn-ghost{color:var(--text-dark);border-color:rgba(42,32,20,.3)}
+  .s-light .btn-ghost:hover{color:var(--vermilion);border-color:var(--vermilion)}
+  .wa-ico{width:18px;height:18px;fill:currentColor}
+
+  /* ============ DEFINITION STRIP ============ */
+  .define{
+    border-top:1px solid var(--line-gold);border-bottom:1px solid var(--line-gold);
+    padding:34px 0;text-align:center;background:var(--ink-2);
+  }
+  .define p{max-width:620px;margin:0 auto;color:var(--text-light-soft);font-family:var(--display);font-style:italic;font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.5}
+  .define b{color:var(--saffron-soft);font-style:normal}
+
+  /* ============ GENERIC TWO-COL / CONTENT ============ */
+  .stack > * + *{margin-top:1.1rem}
+  .pull{font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);line-height:1.25;color:var(--text-light)}
+  .s-light .pull{color:var(--text-dark)}
+
+  /* credentials inline */
+  .creds{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px}
+  .creds li{list-style:none;font-size:.92rem;color:var(--text-light-soft);display:flex;align-items:center;gap:9px}
+  .creds li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--saffron);display:inline-block}
+
+  /* ============ ROTEIRO ============ */
+  .roteiro-grid{display:grid;gap:18px;margin-top:40px}
+  @media(min-width:780px){.roteiro-grid{grid-template-columns:1fr 1fr}}
+  .city{
+    position:relative;border:1px solid rgba(42,32,20,.18);border-radius:18px;
+    padding:30px 28px;background:linear-gradient(180deg,#F6EEDD,#EBDCC0);
+    transition:transform .3s, box-shadow .3s;overflow:hidden;
+  }
+  .city:hover{transform:translateY(-4px);box-shadow:0 22px 50px -28px rgba(120,70,20,.45)}
+  .city.feature{
+    grid-column:1/-1;background:linear-gradient(135deg,#1C140C,#2A1B0E);
+    border-color:var(--line-gold);color:var(--text-light);
+  }
+  .city .num{font-family:var(--display);font-size:.95rem;color:var(--vermilion);letter-spacing:.05em}
+  .city.feature .num{color:var(--saffron)}
+  .city h3{font-size:1.5rem;margin:6px 0 2px;color:var(--text-dark)}
+  .city.feature h3{color:var(--bone);font-size:1.8rem}
+  .city .nights{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dark-soft)}
+  .city.feature .nights{color:var(--text-light-soft)}
+  .city .poetic{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--vermilion);margin:14px 0 12px}
+  .city.feature .poetic{color:var(--saffron-soft)}
+  .city p{font-size:.98rem;color:var(--text-dark-soft)}
+  .city.feature p{color:var(--text-light-soft)}
+  .city .hotel{margin-top:16px;font-size:.84rem;color:var(--text-dark-soft);display:flex;align-items:center;gap:8px}
+  .city.feature .hotel{color:var(--text-light-soft)}
+  .city .hotel b{color:var(--text-dark);font-weight:600}
+  .city.feature .hotel b{color:var(--bone)}
+
+  /* ============ INCLUSO ============ */
+  .cols{display:grid;gap:30px;margin-top:40px}
+  @media(min-width:760px){.cols{grid-template-columns:1fr 1fr;gap:48px}}
+  .col h3{font-size:1.25rem;margin-bottom:18px;display:flex;align-items:center;gap:10px;color:var(--text-dark)}
+  .col ul{list-style:none}
+  .col li{padding:11px 0;border-bottom:1px solid rgba(42,32,20,.12);font-size:.98rem;color:var(--text-dark-soft);display:flex;gap:12px;align-items:flex-start}
+  .col li .mark{flex:none;margin-top:4px;width:16px;height:16px}
+  .yes .mark{fill:#2E7D4F}
+  .no .mark{fill:#A04231}
+  .col.no h3{color:#8a3527}
+
+  /* ============ OFFER ============ */
+  .offer-card{
+    max-width:620px;margin:38px auto 0;text-align:center;
+    border:1.5px solid var(--line-gold);border-radius:24px;
+    padding:clamp(34px,6vw,56px) 32px;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(232,147,46,.14), transparent 60%),
+      linear-gradient(180deg,#1E160E,#15100B);
+    box-shadow:0 40px 90px -40px rgba(232,147,46,.4);
+  }
+  .offer-card .from{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-light-soft)}
+  .offer-card .price{font-family:var(--display);font-size:clamp(3rem,9vw,4.6rem);line-height:1;color:var(--bone);margin:8px 0 2px}
+  .offer-card .price small{font-size:1.6rem;color:var(--saffron)}
+  .offer-card .per{color:var(--text-light-soft);font-size:.95rem}
+  .offer-card .fine{margin-top:22px;font-size:.86rem;color:var(--text-light-soft);line-height:1.7}
+  .offer-card hr{border:0;border-top:1px solid var(--line-gold);margin:26px 0}
+
+  /* ============ FINAL ============ */
+  .final{
+    text-align:center;
+    background:
+      radial-gradient(100% 80% at 50% 0%, rgba(178,58,46,.22), transparent 55%),
+      radial-gradient(90% 70% at 50% 120%, rgba(232,147,46,.16), transparent 60%),
+      var(--ink);
+  }
+  .final h2{font-size:clamp(2rem,5vw,3.4rem);max-width:760px;margin:0 auto 1.2rem}
+  .contacts{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .contacts a{color:var(--text-light);text-decoration:none;font-size:.96rem;display:flex;flex-direction:column;gap:2px;align-items:center}
+  .contacts a b{font-family:var(--display);font-size:1.15rem;color:var(--saffron-soft)}
+  .contacts a:hover b{color:var(--saffron)}
+
+  footer{background:#100B07;color:var(--text-light-soft);padding:50px 24px;text-align:center;border-top:1px solid var(--line-gold)}
+  footer .fmark{font-family:var(--display);font-size:1.2rem;color:var(--text-light)}
+  footer .fmark span{color:var(--saffron)}
+  footer .tag{font-style:italic;font-family:var(--display);margin:10px 0 18px;color:var(--saffron-soft)}
+  footer .links a{color:var(--text-light-soft);text-decoration:none;margin:0 10px;font-size:.85rem}
+  footer .links a:hover{color:var(--saffron)}
+  footer .sanskrit{margin-top:24px;color:var(--line-gold);letter-spacing:.3em;font-family:var(--display)}
+
+  /* floating whatsapp */
+  .float-wa{
+    position:fixed;right:18px;bottom:18px;z-index:50;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;display:grid;place-items:center;
+    box-shadow:0 10px 30px -6px rgba(37,211,102,.6);
+    transition:transform .2s;
+  }
+  .float-wa:hover{transform:scale(1.08)}
+  .float-wa svg{width:30px;height:30px;fill:#fff}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .play{animation:none}
+    html{scroll-behavior:auto}
+  }
+  :focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brandmark">Yatra <span>·</span> India &amp; Nepal</div>
+      <a class="mini" href="#roteiro">O roteiro</a>
+    </nav>
+
+    <div class="inner">
+      <span class="eyebrow reveal">25 out — 08 nov · 2026 · 16 dias</span>
+      <h1 class="reveal">Yatra India e Nepal 2026</h1>
+      <p class="sub reveal">Uma peregrinação aos templos vivos do Ganges e do Himalaia, conduzida por quem estuda, pratica e pertence a essa tradição.</p>
+
+      <!-- DARSHAN VIDEO FRAME (signature) -->
+      <div class="darshan reveal">
+        <div class="finial"></div>
+        <div class="frame">
+          <!-- COLE O LINK DO SEU VÍDEO em data-video (YouTube/Vimeo/Panda embed URL).
+               Ex: data-video="https://www.youtube.com/embed/SEU_ID?autoplay=1" -->
+          <div class="screen" id="player" data-video="" role="button" tabindex="0" aria-label="Assistir ao vídeo da Yatra">
+            <div class="poster" id="poster">
+              <div class="play" aria-hidden="true"></div>
+              <span class="cap">Assista — 3 minutos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="play-nudge reveal">Aperte o play. <strong>Em poucos minutos você vai sentir</strong> por que chamamos isto de Yatra, e não de viagem.</p>
+
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="https://wa.me/5511997508182?text=Ol%C3%A1%20Yuri!%20Vi%20a%20p%C3%A1gina%20da%20Yatra%20India%20e%20Nepal%202026%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.04c-.25.69-1.45 1.32-1.99 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.32-1.72-.63-3.03-1.31-5.01-4.36-5.16-4.56-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.53.28-.3.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2.01.96.3.15.5.22.57.35.07.13.07.74-.18 1.43Z"/></svg>
+          Quero conversar agora
+        </a>
+        <a class="btn btn-ghost" href="#proposta">Como funciona</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- definição de yatra -->
+  <div class="define reveal">
+    <p><b>Yatra</b> (यात्रा), em sânscrito, é a peregrinação: o caminho que se faz por fora para chegar a um lugar por dentro.</p>
+  </div>
+
+  <!-- ============ ESPELHO / PROBLEMA ============ -->
+  <section class="s-dark">
+    <div class="wrap narrow stack reveal">
+      <span class="eyebrow">O que trava quase todo mundo</span>
+      <h2>O desejo de ir você já tem. Falta o caminho seguro para ele virar realidade.</h2>
+      <p>Você já leu sobre os templos. Já cantou os mantras. Talvez já tenha sentido, numa aula de yoga ou de filosofia, que existe ali um oceano inteiro esperando.</p>
+      <p>Mas quando pensa em ir de verdade — o idioma, as distâncias, o medo de cair numa cilada turística — o sonho volta pra gaveta. Ou pior: alguém foi, numa excursão comum, e voltou com fotos bonitas e nada por dentro.</p>
+      <p class="pull">A questão nunca foi o destino. Foi com quem você caminha, e com qual intenção.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROPOSTA ============ -->
+  <section class="s-light" id="proposta">
+    <div class="wrap narrow stack reveal">
+      <span class="eyebrow dark">A proposta</span>
+      <h2>Não é turismo espiritual. É imersão na fonte.</h2>
+      <p>A Yatra India e Nepal não te leva para tirar foto na frente do templo. Te leva para dentro dele — para o ritual, o mantra, o silêncio e o significado.</p>
+      <p>Durante 16 dias, cruzamos Nepal e Índia por <em class="word">Kathmandu, Varanasi, Haridwar, Rishikesh e Delhi</em>. Hospedagem selecionada, alimentação de qualidade, transporte seguro e uma curadoria espiritual que transforma cada parada em um portal.</p>
+      <p>Tudo já resolvido, para que a única coisa que reste a você seja estar presente.</p>
+      <div class="cta-row" style="justify-content:flex-start;margin-top:24px">
+        <a class="btn btn-ghost" href="#top" onclick="document.getElementById('player').scrollIntoView({behavior:'smooth',block:'center'});return false;">▶ Tem 3 minutos? Assista ao vídeo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUEM CONDUZ ============ -->
+  <section class="s-dark">
+    <div class="wrap narrow stack reveal">
+      <span class="eyebrow">Quem conduz</span>
+      <h2>Seu guia não é um intérprete. É um caminhante.</h2>
+      <p>Yuri D. Wolf <em class="word">(Vāmadeva Śiva)</em> tem 37 anos e entrou no Yoga em 2014. Desde 2015 estuda sânscrito e as filosofias indianas com mestres renomados. É professor de sânscrito desde 2017, especialista em Nutrição Ayurvédica pelo Greens Ayurveda, no Kerala, e praticante devotado da tradição tântrica nepalesa.</p>
+      <p>São três grandes jornadas ao subcontinente — não como turista, mas como buscador — e cerca de mil alunos acompanhados ao longo dos anos.</p>
+      <p>Viajar com o Yuri é diferente porque ele não separa o que ensina do que vive. O que cabe numa sala de aula, ele mostra acontecendo ao vivo: nos rituais, nas margens do Ganges, nas pedras de mil anos.</p>
+      <ul class="creds">
+        <li>10+ anos de estudo</li>
+        <li>3 jornadas ao subcontinente</li>
+        <li>~1.000 alunos</li>
+        <li>Sânscrito · Ayurveda · Filosofias indianas</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ROTEIRO ============ -->
+  <section class="s-light" id="roteiro">
+    <div class="wrap">
+      <div class="narrow stack reveal" style="text-align:center;margin:0 auto">
+        <span class="eyebrow dark">O caminho</span>
+        <h2>16 dias. 5 cidades sagradas. Tudo entre o Himalaia e o Ganges.</h2>
+      </div>
+
+      <div class="roteiro-grid">
+        <article class="city reveal">
+          <span class="num">01</span>
+          <h3>Kathmandu</h3>
+          <span class="nights">Nepal · 5 noites</span>
+          <p class="poetic">O vale onde o tantra ainda respira.</p>
+          <p>Pashupatinath, o grande bastião de Śiva às margens do Bagmati. As stupas de Boudhanath e Swayambhunath. Dakshinkali e seus rituais viscerais. Palanchowk Bhagwati entre montanhas nevadas. As praças medievais de Bhaktapur e Patan.</p>
+          <p class="hotel">⌂ <b>Hotel Crystal Pashupati</b> — a um passo do templo</p>
+        </article>
+
+        <article class="city feature reveal">
+          <span class="num">02</span>
+          <h3>Varanasi</h3>
+          <span class="nights">Índia · 3 noites</span>
+          <p class="poetic">A cidade mais antiga ainda acordada — e ainda viva.</p>
+          <p>Barco antes do amanhecer, quando o Ganges fica cor de rosa e os hinos sobem dos ghats. Kal Bhairava, guardião da cidade. Sankat Mochan Hanuman e seu kirtan fervoroso. Kashi Vishwanath, um dos 12 Jyotirlingas. O ritual do Rudrābhiṣeka. O Aarti ao entardecer.</p>
+          <p class="hotel">⌂ <b>Ganges Grand Hotel</b> — à beira do rio</p>
+        </article>
+
+        <article class="city reveal">
+          <span class="num">03</span>
+          <h3>Haridwar</h3>
+          <span class="nights">Índia · 3 noites</span>
+          <p class="poetic">Onde o Ganges desce da montanha para a planície.</p>
+          <p>Mansa Devi no alto da colina, alcançada por teleférico. O Aarti de Har Ki Pauri, ghat onde o santo Bhartrihari veio meditar. Kankhal e o altar de Daksha Mahadev. Chandi Devi, a face feroz da Mãe Divina.</p>
+          <p class="hotel">⌂ <b>Regenta Orko's Haridwar</b></p>
+        </article>
+
+        <article class="city reveal">
+          <span class="num">04</span>
+          <h3>Rishikesh</h3>
+          <span class="nights">Índia · 2 noites</span>
+          <p class="poetic">A capital mundial do Yoga.</p>
+          <p>Laxman Jhula e o Templo Tryambakeshwar com seus 13 andares de esculturas. Kunjpuri ao nascer do sol, com os Himalayas em panorâmica. Ram Jhula e o Aarti do Ashram Parmarth Niketan nas margens do Ganges.</p>
+          <p class="hotel">⌂ <b>Moustache Luxuria Rishikesh</b></p>
+        </article>
+
+        <article class="city reveal">
+          <span class="num">05</span>
+          <h3>Delhi</h3>
+          <span class="nights">Índia · 1 noite</span>
+          <p class="poetic">O último respiro antes de casa.</p>
+          <p>O complexo do Templo Chhatarpur e sua estátua de Hanuman com 33 metros de altura. Um almoço em Connaught Place — e o caminho de volta, com você já diferente de quem chegou.</p>
+          <p class="hotel">⌂ <b>Surya International Hotel</b></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCLUSO ============ -->
+  <section class="s-light s-darker" style="background:var(--parch-2)">
+    <div class="wrap">
+      <div class="narrow reveal" style="text-align:center;margin:0 auto">
+        <span class="eyebrow dark">O que está incluso</span>
+        <h2 style="color:var(--text-dark)">Tudo o que você precisa. Nada do que é supérfluo.</h2>
+      </div>
+      <div class="cols reveal">
+        <div class="col yes">
+          <h3>✓ Está incluso</h3>
+          <ul>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Curso pré-viagem de Sânscrito aplicado ao Mantrayoga</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>14 noites de hospedagem (quarto duplo)</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Café da manhã e jantar diários nos hotéis</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Transporte terrestre em van com ar-condicionado</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Guia local bilíngue com tradução simultânea ao português</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Voos internos: Kathmandu–Varanasi e Varanasi–Dehradun</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Trem Haridwar–Delhi em vagão climatizado</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Tuktuk e passeio de barco em Varanasi</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M8 14 4 10l1.4-1.4L8 11.2l6.6-6.6L16 6z"/></svg>Taxas de entrada em Kathmandu e impostos vigentes</li>
+          </ul>
+        </div>
+        <div class="col no">
+          <h3>✗ Não está incluso</h3>
+          <ul>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M10 8.6 5.4 4 4 5.4 8.6 10 4 14.6 5.4 16 10 11.4 14.6 16 16 14.6 11.4 10 16 5.4 14.6 4z"/></svg>Passagens internacionais Brasil ↔ subcontinente</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M10 8.6 5.4 4 4 5.4 8.6 10 4 14.6 5.4 16 10 11.4 14.6 16 16 14.6 11.4 10 16 5.4 14.6 4z"/></svg>Almoços e refeições fora dos hotéis</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M10 8.6 5.4 4 4 5.4 8.6 10 4 14.6 5.4 16 10 11.4 14.6 16 16 14.6 11.4 10 16 5.4 14.6 4z"/></svg>Gastos pessoais: compras, gorjetas, lavanderia, telefone</li>
+            <li><svg class="mark" viewBox="0 0 20 20"><path d="M10 8.6 5.4 4 4 5.4 8.6 10 4 14.6 5.4 16 10 11.4 14.6 16 16 14.6 11.4 10 16 5.4 14.6 4z"/></svg>Taxas de entrada e de fotografia além das listadas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INVESTIMENTO ============ -->
+  <section class="s-dark">
+    <div class="wrap narrow stack reveal" style="text-align:center;margin:0 auto">
+      <span class="eyebrow">Investimento</span>
+      <h2>Uma viagem. Uma vida diferente depois dela.</h2>
+      <p>Dá para ir à Índia de muitas formas. Dá para contratar uma agência genérica, ficar num hotel cinco estrelas e voltar com lembrancinhas. Ou dá para ir com intenção — guiado por quem passou anos construindo este caminho para que você o percorresse com segurança, profundidade e alegria.</p>
+    </div>
+
+    <div class="offer-card reveal">
+      <span class="from">Pacote completo · por pessoa</span>
+      <div class="price"><small>US$</small> 3.100</div>
+      <span class="per">em ocupação dupla</span>
+      <hr />
+      <p class="fine">
+        Cobre toda a curadoria, hospedagem com café e jantar, transportes internos, voos Kathmandu–Varanasi e Varanasi–Dehradun, trem, barco e tuktuk.<br><br>
+        Condições de pagamento facilitadas. Valores para pacotes fechados até <em class="word">agosto/2026</em>. Não inclui a passagem internacional de ida e volta.
+      </p>
+      <div class="cta-row" style="margin-top:28px">
+        <a class="btn btn-primary" href="https://wa.me/5511997508182?text=Ol%C3%A1%20Yuri!%20Quero%20garantir%20minha%20vaga%20na%20Yatra%20India%20e%20Nepal%202026." target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.04c-.25.69-1.45 1.32-1.99 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.32-1.72-.63-3.03-1.31-5.01-4.36-5.16-4.56-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.53.28-.3.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2.01.96.3.15.5.22.57.35.07.13.07.74-.18 1.43Z"/></svg>
+          Quero garantir minha vaga
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FECHAMENTO ============ -->
+  <section class="s-dark final">
+    <div class="wrap reveal">
+      <span class="eyebrow">Vagas limitadas · grupo pequeno</span>
+      <h2>Os templos existem. Os rituais acontecem toda manhã. Falta você estar lá.</h2>
+      <p class="lede narrow" style="margin:0 auto">Esses templos resistem há séculos. O Ganges continua correndo, os mantras continuam ecoando — com ou sem você. A diferença é que, em outubro de 2026, um grupo pequeno e bem escolhido vai estar lá: presente, desperto, guiado. Se você sente que é hora, confie nisso.</p>
+
+      <div class="cta-row" style="margin-top:34px">
+        <a class="btn btn-primary" href="https://wa.me/5511997508182?text=Ol%C3%A1%20Yuri!%20Sobre%20a%20Yatra%20India%20e%20Nepal%202026%20—%20quero%20ir." target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.04c-.25.69-1.45 1.32-1.99 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.32-1.72-.63-3.03-1.31-5.01-4.36-5.16-4.56-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.53.28-.3.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2.01.96.3.15.5.22.57.35.07.13.07.74-.18 1.43Z"/></svg>
+          Quero ir
+        </a>
+      </div>
+
+      <div class="contacts">
+        <a href="https://wa.me/5511997508182" target="_blank" rel="noopener">
+          <b>Yuri D. Wolf</b>
+          (11) 99750-8182
+        </a>
+        <a href="https://wa.me/5512983061237" target="_blank" rel="noopener">
+          <b>João Paulo Barbosa</b>
+          (12) 98306-1237
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fmark">Yatra <span>·</span> India e Nepal 2026</div>
+    <p class="tag">Esta não é uma excursão. É um reencontro.</p>
+    <div class="links">
+      <a href="https://instagram.com/yuri.sanscrito" target="_blank" rel="noopener">@yuri.sanscrito</a>
+      <a href="#proposta">Como funciona</a>
+      <a href="#roteiro">Roteiro</a>
+    </div>
+    <div class="sanskrit">॥ श्री विघ्नराजाय नमः ॥</div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/5511997508182?text=Ol%C3%A1%20Yuri!%20Vi%20a%20p%C3%A1gina%20da%20Yatra%20e%20quero%20saber%20mais." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.04c-.25.69-1.45 1.32-1.99 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.32-1.72-.63-3.03-1.31-5.01-4.36-5.16-4.56-.15-.2-1.23-1.64-1.23-3.13 0-1.49.78-2.22 1.06-2.53.28-.3.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.37 1.46.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2.01.96.3.15.5.22.57.35.07.13.07.74-.18 1.43Z"/></svg>
+  </a>
+
+<script>
+  // scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // video play
+  const player = document.getElementById('player');
+  const poster = document.getElementById('poster');
+  function playVideo(){
+    const url = player.dataset.video;
+    if(url){
+      const iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');
+      iframe.setAttribute('allowfullscreen','');
+      player.appendChild(iframe);
+      poster.style.opacity='0';
+      setTimeout(()=>poster.style.display='none',400);
+    } else {
+      // sem vídeo cadastrado ainda — feedback discreto
+      const cap = poster.querySelector('.cap');
+      cap.textContent = 'Cole o link do vídeo em data-video';
+      cap.style.color = 'var(--saffron)';
+    }
+  }
+  player.addEventListener('click', playVideo);
+  player.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); playVideo(); }});
+</script>
+</body>
+</html>
