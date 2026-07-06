@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Estratégia de Marketing Digital — Yātra India e Nepal 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#15100B;--ink-2:#1E160E;--ink-3:#261A10;
+  --parch:#EFE3CB;--parch-2:#E4D5B0;--bone:#F4ECDA;
+  --saffron:#E8932E;--saffron-soft:#F0B566;
+  --vermilion:#B23A2E;--gold:#CBA24B;
+  --text-dark:#2A2014;--text-dark-soft:#5B4A33;
+  --text-light:#ECE0CB;--text-light-soft:#B7A684;
+  --line-gold:rgba(203,162,75,.22);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --maxw:900px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--text-light);-webkit-font-smoothing:antialiased;line-height:1.75;overflow-x:hidden}
+::selection{background:var(--saffron);color:var(--ink)}
+
+/* LAYOUT */
+.page{max-width:var(--maxw);margin:0 auto;padding:0 28px 100px}
+
+/* NAV */
+.topnav{border-bottom:1px solid var(--line-gold);padding:20px 28px;position:sticky;top:0;background:rgba(21,16,11,.95);backdrop-filter:blur(8px);z-index:40;display:flex;justify-content:space-between;align-items:center}
+.topnav .brand{font-family:var(--serif);font-size:.95rem;color:var(--text-light-soft)}
+.topnav .brand span{color:var(--saffron)}
+.toc-toggle{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light-soft);cursor:pointer;border:1px solid var(--line-gold);padding:7px 14px;border-radius:99px;background:none;font-family:var(--sans);transition:.2s}
+.toc-toggle:hover{color:var(--saffron);border-color:var(--saffron)}
+
+/* TABLE OF CONTENTS */
+.toc-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:50;background:rgba(10,6,2,.96);overflow-y:auto;padding:40px 28px}
+.toc-drawer.open{display:block}
+.toc-close{float:right;font-size:1.2rem;cursor:pointer;color:var(--text-light-soft);background:none;border:none;font-family:var(--sans)}
+.toc-drawer h2{font-family:var(--serif);font-size:1.5rem;color:var(--bone);margin-bottom:32px}
+.toc-list{list-style:none;max-width:600px}
+.toc-list li{border-bottom:1px solid var(--line-gold);padding:12px 0}
+.toc-list a{color:var(--text-light-soft);text-decoration:none;font-size:.95rem;display:flex;align-items:baseline;gap:12px;transition:.2s}
+.toc-list a:hover{color:var(--saffron)}
+.toc-list a .n{font-family:var(--serif);font-size:.78rem;color:var(--saffron);min-width:28px}
+.toc-list .sub{padding-left:40px;border-bottom:none}
+.toc-list .sub a{font-size:.88rem;color:#7a6850}
+
+/* HERO */
+.doc-hero{padding:80px 0 60px;border-bottom:1px solid var(--line-gold)}
+.doc-hero .label{font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--saffron);font-weight:600;display:block;margin-bottom:20px}
+.doc-hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:400;line-height:1.05;color:var(--bone);margin-bottom:20px;max-width:700px}
+.doc-hero .lead{font-size:1.08rem;color:var(--text-light-soft);max-width:640px;line-height:1.7;font-family:var(--serif);font-style:italic}
+.doc-hero .meta{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap}
+.doc-hero .meta-item{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-light-soft)}
+.doc-hero .meta-item span{color:var(--saffron-soft);font-style:normal}
+
+/* CHAPTER HEADERS */
+.chapter{margin-top:80px;padding-top:60px;border-top:1px solid var(--line-gold)}
+.chapter-label{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--saffron);font-weight:600;display:block;margin-bottom:14px}
+.chapter h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:400;color:var(--bone);line-height:1.1;margin-bottom:28px}
+.chapter .intro{font-size:1.05rem;color:var(--text-light-soft);line-height:1.75;margin-bottom:32px;font-family:var(--serif);font-style:italic;border-left:2px solid var(--saffron);padding-left:20px}
+
+/* SECTIONS */
+.section{margin-top:48px}
+.section h3{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--saffron-soft);margin-bottom:16px;line-height:1.2}
+.section h4{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--bone);margin:24px 0 10px;letter-spacing:.01em}
+.section p{font-size:.98rem;color:var(--text-light-soft);line-height:1.78;margin-bottom:14px}
+.section p strong{color:var(--text-light);font-weight:600}
+.section p em{color:var(--saffron-soft);font-style:italic}
+
+/* CALLOUT BOXES */
+.callout{background:var(--ink-2);border:1px solid var(--line-gold);border-left:3px solid var(--saffron);border-radius:8px;padding:22px 24px;margin:28px 0}
+.callout.vermilion{border-left-color:var(--vermilion)}
+.callout.gold{border-left-color:var(--gold);background:rgba(203,162,75,.06)}
+.callout .callout-label{font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--saffron);font-weight:600;margin-bottom:10px}
+.callout.vermilion .callout-label{color:var(--vermilion)}
+.callout.gold .callout-label{color:var(--gold)}
+.callout p{font-size:.93rem;color:var(--text-light-soft);margin:0;line-height:1.7}
+.callout p+p{margin-top:8px}
+.callout strong{color:var(--text-light)}
+
+/* WEEK CARDS (calendar) */
+.week-grid{display:grid;gap:12px;margin:24px 0}
+.week{background:var(--ink-2);border:1px solid var(--line-gold);border-radius:12px;overflow:hidden}
+.week-header{background:rgba(232,147,46,.1);padding:14px 20px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line-gold)}
+.week-header .wn{font-family:var(--serif);font-size:.82rem;color:var(--saffron-soft)}
+.week-header .wt{font-family:var(--serif);font-size:1.05rem;color:var(--bone)}
+.week-header .wp{font-size:.75rem;color:var(--text-light-soft);letter-spacing:.1em;text-transform:uppercase}
+.week-body{padding:18px 20px}
+.week-day{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid rgba(203,162,75,.1)}
+.week-day:last-child{border:none}
+.week-day .format{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);min-width:60px;padding-top:2px;font-weight:600}
+.week-day .format.story{color:#8B9FC2}
+.week-day .format.reels{color:#C27A52}
+.week-day .format.post{color:#7A9C6A}
+.week-day .content{font-size:.9rem;color:var(--text-light-soft);line-height:1.55}
+.week-day .content strong{color:var(--text-light)}
+
+/* SCRIPT BLOCKS */
+.script{background:rgba(0,0,0,.35);border:1px solid var(--line-gold);border-radius:10px;padding:28px 28px;margin:24px 0;position:relative}
+.script::before{content:"ROTEIRO";position:absolute;top:-10px;left:20px;font-size:.6rem;letter-spacing:.3em;background:var(--ink);padding:0 10px;color:var(--saffron);font-weight:700}
+.script .s-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-light-soft);margin-bottom:4px;font-weight:600}
+.script .s-line{font-size:.95rem;color:var(--text-light);line-height:1.65;margin-bottom:16px;font-family:var(--serif)}
+.script .s-line.action{color:var(--text-light-soft);font-style:italic;font-size:.85rem;font-family:var(--sans)}
+.script .s-note{font-size:.8rem;color:var(--text-light-soft);border-top:1px solid var(--line-gold);padding-top:14px;margin-top:14px}
+
+/* FLOW DIAGRAM */
+.flow{display:flex;flex-direction:column;gap:0;margin:28px 0}
+.flow-step{display:flex;gap:20px;position:relative}
+.flow-step:not(:last-child)::after{content:"";position:absolute;left:17px;top:38px;bottom:-10px;width:2px;background:linear-gradient(var(--line-gold),transparent)}
+.flow-step .bubble{width:36px;height:36px;border-radius:50%;border:2px solid var(--saffron);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.85rem;color:var(--saffron);flex:none;margin-top:2px}
+.flow-step .flow-content{padding-bottom:28px}
+.flow-step .flow-content h4{font-family:var(--serif);font-size:1rem;color:var(--bone);margin-bottom:6px}
+.flow-step .flow-content p{font-size:.88rem;color:var(--text-light-soft);line-height:1.6}
+
+/* METRIC TABLE */
+.metric-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:.88rem}
+.metric-table th{text-align:left;padding:10px 14px;border-bottom:2px solid var(--line-gold);color:var(--saffron);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.metric-table td{padding:11px 14px;border-bottom:1px solid rgba(203,162,75,.12);color:var(--text-light-soft);vertical-align:top}
+.metric-table tr:hover td{background:rgba(232,147,46,.04)}
+.metric-table td:first-child{color:var(--text-light);font-weight:500}
+
+/* PERSONA */
+.persona{background:var(--ink-3);border:1px solid var(--line-gold);border-radius:14px;padding:28px;margin:24px 0}
+.persona h4{font-family:var(--serif);font-size:1.15rem;color:var(--bone);margin-bottom:6px}
+.persona .subtitle{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron-soft);margin-bottom:20px;display:block}
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.persona-grid{grid-template-columns:1fr}}
+.persona-item .pi-label{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-light-soft);font-weight:600;margin-bottom:5px}
+.persona-item .pi-val{font-size:.9rem;color:var(--text-light-soft);line-height:1.6}
+
+/* DIVIDER */
+.divider{text-align:center;color:var(--line-gold);font-family:var(--serif);letter-spacing:.4em;font-size:1rem;margin:60px 0;user-select:none}
+
+/* PRINT */
+@media print{body{background:#fff;color:#111}.topnav{display:none}.chapter{page-break-before:always}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="brand">Yātra <span>·</span> Estratégia 2026</div>
+  <button class="toc-toggle" onclick="document.getElementById('toc').classList.toggle('open')">Índice</button>
+</nav>
+
+<div class="toc-drawer" id="toc">
+  <button class="toc-close" onclick="document.getElementById('toc').classList.remove('open')">✕ Fechar</button>
+  <h2>Índice</h2>
+  <ul class="toc-list">
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#quem-compra"><span class="n">01</span> Quem compra — e por que compra</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#estrutura"><span class="n">02</span> A estrutura da estratégia</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#vsl"><span class="n">03</span> Roteiro do vídeo de vendas (VSL)</a></li>
+    <li class="sub"><a onclick="document.getElementById('toc').classList.remove('open')" href="#vsl-estrutura">— Estrutura cena a cena</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#instagram"><span class="n">04</span> Instagram — calendário 16 semanas</a></li>
+    <li class="sub"><a onclick="document.getElementById('toc').classList.remove('open')" href="#fase1">— Fase 1: Semear (maio)</a></li>
+    <li class="sub"><a onclick="document.getElementById('toc').classList.remove('open')" href="#fase2">— Fase 2: Revelar (junho)</a></li>
+    <li class="sub"><a onclick="document.getElementById('toc').classList.remove('open')" href="#fase3">— Fase 3: Provar (julho)</a></li>
+    <li class="sub"><a onclick="document.getElementById('toc').classList.remove('open')" href="#fase4">— Fase 4: Colher (agosto)</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#roteiros-posts"><span class="n">05</span> Roteiros de posts e reels</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#whatsapp"><span class="n">06</span> Scripts de WhatsApp</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#trafego"><span class="n">07</span> Tráfego pago</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#metricas"><span class="n">08</span> Métricas e decisões</a></li>
+    <li><a onclick="document.getElementById('toc').classList.remove('open')" href="#pos"><span class="n">09</span> Pós-venda e fidelização</a></li>
+  </ul>
+</div>
+
+<div class="page">
+
+<!-- HERO -->
+<div class="doc-hero">
+  <span class="label">Documento interno · Uso estratégico</span>
+  <h1>Estratégia de Marketing Digital<br>Yātra India e Nepal 2026</h1>
+  <p class="lead">Um plano completo para vender 16 dias de peregrinação a praticantes de yoga, filosofia indiana e sânscrito que já estão no caminho, mas ainda não cruzaram o oceano.</p>
+  <div class="meta">
+    <div class="meta-item">Produto <span>Jornada (Re)Conhecer</span></div>
+    <div class="meta-item">Guia <span>Yuri D. Wolf</span></div>
+    <div class="meta-item">Prazo <span>agosto/2026</span></div>
+    <div class="meta-item">Partida <span>25 out. 2026</span></div>
+  </div>
+</div>
+
+<!-- ══ CAP 01 ══ -->
+<div class="chapter" id="quem-compra">
+  <span class="chapter-label">Capítulo 01</span>
+  <h2>Quem compra — e por que compra</h2>
+  <p class="intro">Antes de escrever um post ou gravar um reels, é preciso saber com quem estamos falando. Não em teoria. Na vida real.</p>
+
+  <div class="section">
+    <h3>A pessoa que vai comprar</h3>
+    <p>Ela não é uma turista em busca de exotismo. Ela já sabe o que é um mantra, já leu algo de Patañjali, já perguntou ao professor de yoga o que significa a palavra que ele usa antes de começar a aula. Provavelmente já fez um curso com o Yuri, ou segue o Instagram dele há tempo suficiente para confiar.</p>
+    <p>O gap que ela sente não é de informação. É de <strong>experiência</strong>. Ela estuda sobre os templos, mas nunca ficou em pé diante de um. Canta o mantra, mas nunca ouviu ele ecoando dentro da câmara de pedra onde foi composto. Sabe que existe algo real nisso tudo — e sente que falta dar um passo que só pode ser dado pessoalmente.</p>
+    <p>Esse gap é o que a Yātra preenche. Toda a comunicação parte daí.</p>
+  </div>
+
+  <div class="persona">
+    <h4>Rafaela — 34 anos, São Paulo</h4>
+    <span class="subtitle">Perfil composto baseado no público real do Yuri</span>
+    <div class="persona-grid">
+      <div class="persona-item"><div class="pi-label">Rotina</div><div class="pi-val">Professora de yoga há 6 anos. Pratica meditação diariamente. Aula de sânscrito aos sábados.</div></div>
+      <div class="persona-item"><div class="pi-label">Sonho antigo</div><div class="pi-val">Quer ir à Índia há anos. Nunca foi porque não sabia como fazer isso "de verdade".</div></div>
+      <div class="persona-item"><div class="pi-label">Medo principal</div><div class="pi-val">Chegar lá e viver uma experiência rasa. Ou pior: turística.</div></div>
+      <div class="persona-item"><div class="pi-label">Objeção de compra</div><div class="pi-val">O valor parece alto. Mas ela já gastou mais em cursos que prometiam menos.</div></div>
+      <div class="persona-item"><div class="pi-label">O que ela precisa ouvir</div><div class="pi-val">Que vai ser cuidada. Que vai mergulhar de verdade. Que o Yuri já esteve lá antes dela.</div></div>
+      <div class="persona-item"><div class="pi-label">O que move a decisão</div><div class="pi-val">Um vídeo que faz ela sentir o lugar antes de estar lá. Ou um depoimento de alguém que foi.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>O que não funciona com esse público</h3>
+    <p>Urgência falsa. Contagem regressiva sem razão real. Linguagem de vendas agressiva. Promoção com desconto de 50%. Qualquer coisa que faça parecer que isso é um produto de prateleira.</p>
+    <p>Esse público tem radar muito afinado para o que é genuíno. Vende o que parece verdade. O Yuri é a maior prova do produto — e a comunicação tem que mostrar isso, não esconder atrás de gatilhos de escassez fabricados.</p>
+    <p>A escassez aqui é real: vagas limitadas, grupo pequeno por escolha, um guia que tem tempo e atenção para dar a cada pessoa. Isso é suficiente. Não precisa inflar.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Princípio central</div>
+    <p><strong>A venda não é da viagem. É do Yuri.</strong> A viagem é o veículo. O que a pessoa está comprando é acesso a alguém que esteve lá três vezes, que entende o que aqueles templos significam, que vai traduzir o invisível. Toda a comunicação deve construir essa confiança antes de pedir qualquer decisão.</p>
+  </div>
+</div>
+
+<!-- ══ CAP 02 ══ -->
+<div class="chapter" id="estrutura">
+  <span class="chapter-label">Capítulo 02</span>
+  <h2>A estrutura da estratégia</h2>
+  <p class="intro">Não existe fórmula universal, mas existe uma lógica. Quem está no caminho espiritual não compra por impulso — compra por confiança construída ao longo do tempo. A estratégia respeita esse tempo.</p>
+
+  <div class="section">
+    <h3>As três camadas</h3>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="bubble">1</div>
+        <div class="flow-content">
+          <h4>Aquecimento — conteúdo orgânico (maio a agosto)</h4>
+          <p>Instagram como palco principal. Posts, reels e stories que constroem autoridade do Yuri, despertam desejo de ir e empurram para o vídeo de vendas. Não vende diretamente. Prepara o terreno.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="bubble">2</div>
+        <div class="flow-content">
+          <h4>Conversão — VSL + landing page + WhatsApp (durante todo o período)</h4>
+          <p>O vídeo de vendas é o coração. A landing page existe para receber quem chegou aquecido e mostrar tudo que precisa para decidir. O WhatsApp é onde a venda acontece de fato — conversa humana, sem robô.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="bubble">3</div>
+        <div class="flow-content">
+          <h4>Aceleração — tráfego pago (julho e agosto)</h4>
+          <p>Meta Ads apenas para quem já conhece o Yuri (remarketing) e para públicos semelhantes ao dele. Não faz sentido anunciar para frio — o produto precisa de contexto para fazer sentido. O tráfego pago amplifica o orgânico, não substitui.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>O funil real</h3>
+    <p><strong>Entrada:</strong> post ou reels orgânico no Instagram → toca algo real na pessoa → ela assiste até o fim.</p>
+    <p><strong>Meio:</strong> ela vai ao perfil, vê mais conteúdo, segue → alguns dias depois, outro post a move → ela clica no link da bio → assiste ao vídeo de vendas → manda mensagem no WhatsApp.</p>
+    <p><strong>Fundo:</strong> conversa no WhatsApp com o Yuri ou com o João Paulo → dúvidas respondidas → decisão de compra → contrato com a 5D Turismo.</p>
+    <p>O ponto de ruptura mais comum é o meio. A pessoa chega na landing page mas não assiste ao vídeo até o fim, ou assiste mas não manda mensagem. É aí que o conteúdo de stories precisa trabalhar mais: mostrando pessoas reais, respondendo objeções, criando familiaridade.</p>
+  </div>
+</div>
+
+<!-- ══ CAP 03 ══ -->
+<div class="chapter" id="vsl">
+  <span class="chapter-label">Capítulo 03</span>
+  <h2>Roteiro do vídeo de vendas</h2>
+  <p class="intro">O vídeo não precisa ser longo. Precisa ser verdadeiro. Entre 8 e 12 minutos é o ideal — suficiente para criar desejo, resolver as objeções principais e fazer a pessoa querer ir. Nada de teleprompter. Nada de roupa de evento. O Yuri em algum lugar com significado: pode ser o próprio quarto com livros ao fundo, pode ser um espaço de prática.</p>
+
+  <div class="section" id="vsl-estrutura">
+    <h3>Estrutura cena a cena</h3>
+
+    <div class="script">
+      <div class="s-label">Cena 01 · abertura · 0:00 – 0:50</div>
+      <div class="s-line action">[Yuri olhando para a câmera, sem introdução. Direto.]</div>
+      <div class="s-line">"Existe um momento, dentro de um templo indiano, em que você para de pensar no que está vendo e começa a sentir de onde aquilo veio. Não é uma experiência intelectual. É visceral. O cheiro do incenso, o som que sobe das pedras, a escuridão que não é falta de luz — é presença.<br><br>Eu já estive lá três vezes. E cada vez que volto, entendo um pouco mais por que os grandes buscadores faziam questão de ir pessoalmente. Porque algumas coisas simplesmente não cabem em livro."</div>
+      <div class="s-note">Tom: íntimo, pausado. Sem música ainda. Câmera fixa. O silêncio entre as frases é proposital.</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 02 · o problema · 0:50 – 2:30</div>
+      <div class="s-line">"Eu conheço muitas pessoas que sonham em ir à Índia há anos. Que estudam, praticam, se aprofundam. E que, quando pensam em ir de verdade, travam.<br><br>Não por falta de vontade. Por falta de um caminho claro.<br><br>A Índia pode ser esmagadora para quem vai sem preparação e sem guia. Você chega num aeroporto caótico, não sabe diferenciar o templo que vale a visita do que existe só para turista, não entende o que os devotos estão cantando, não sabe como se comportar diante de uma deidade. E volta com fotos bonitas e uma sensação de que faltou algo.<br><br>Esse 'algo' é o que a Yātra existe para dar."</div>
+      <div class="s-note">Aqui pode entrar b-roll suave de imagens dos templos — bem discreto, sem virar documentário. A voz do Yuri é o principal.</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 03 · quem sou eu · 2:30 – 4:30</div>
+      <div class="s-line">"Meu nome é Yuri D. Wolf. Tenho 37 anos e entrei no yoga em 2014 da forma mais séria que consegui: estudando sânscrito, filosofia indiana, ayurveda, e mergulhando na tradição tântrica nepalesa, na qual ainda estudo e pratico até hoje.<br><br>Desde 2017 sou professor de sânscrito. Em 2018 me especializei em Nutrição Ayurvédica no Greens Ayurveda, no Kerala. Nos últimos anos, acompanhei cerca de mil alunos em suas jornadas.<br><br>Mas o que me qualifica para te guiar nessa viagem não é o currículo. É o que aprendi ao errar, ao me perder, ao ter que descobrir na prática quais lugares têm potência real, quais guias locais entendem o que buscamos, como se preparar o corpo e a mente para uma experiência assim.<br><br>Já fiz esse caminho três vezes. Desta vez, vou abrir ele para um grupo pequeno — para que cada pessoa possa ter a atenção que uma jornada dessas merece."</div>
+      <div class="s-note">Pode incluir 2 ou 3 fotos reais do Yuri em templos anteriores — bem rápidas, como lampejos.</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 04 · o que é a Yātra · 4:30 – 6:30</div>
+      <div class="s-line">"Em outubro de 2026, vamos passar 16 dias percorrendo sete cidades sagradas entre o Nepal e a Índia: Kathmandu, Bhaktapur e Patan no Nepal — e Varanasi, Haridwar, Rishikesh e Delhi na Índia.<br><br>Mas antes disso, antes mesmo de embarcar, você vai receber um curso de Introdução ao Sânscrito Aplicado ao Mantrayoga. Para que quando você estiver em frente a uma deidade, cantando um mantra dentro de um templo de mil anos, você saiba o que está dizendo. Porque a diferença entre repetir sons e entender o que você está invocando é enorme.<br><br>A jornada é conduzida com cuidado: hotéis limpos e bem localizados, refeições de qualidade, transporte seguro, guia local bilíngue, e eu em cada passo, explicando o que os olhos veem e o que eles não conseguem alcançar sozinhos.<br><br>Não é turismo espiritual. É imersão na fonte."</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 05 · cenas que você vai viver · 6:30 – 8:30</div>
+      <div class="s-line action">[Aqui o Yuri descreve cenas específicas em vez de lugares. Cada uma é uma imagem mental que o espectador pode sentir.]</div>
+      <div class="s-line">"Imagine acordar às quatro da manhã em Varanasi e descer até o rio ainda no escuro. O barco sai em silêncio e você está olhando para a margem quando o primeiro sino começa a tocar — de um templo que você não vê, mas sente. E então o sol aparece. E o Ganges muda de cor. E em volta de você, algo começa que nunca parou — está acontecendo há milênios.<br><br>Ou imagine entrar em Pashupatinath, em Kathmandu, e perceber que não há separação entre o sagrado e o cotidiano. Que o lugar de culto é também o lugar onde as pessoas vivem, choram, celebram. E que você, por alguns dias, também faz parte disso.<br><br>Ou estar diante de Kashi Vishwanath — um dos doze Jyotirlingas — e fazer o Rudrabhisheka. Um ritual que existe há séculos, que foi feito por pessoas muito mais realizadas do que nós, e que agora você também está fazendo. Com consciência. Com mantra. Com presença."</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 06 · objeções · 8:30 – 10:00</div>
+      <div class="s-line">"Quero te falar de algumas perguntas que eu mesmo teria antes de embarcar numa jornada assim.<br><br>Precisa ter experiência prévia? Não. O que precisa é ter algum contato com essa tradição — yoga, sânscrito, filosofia, ayurveda. O grupo vai ser formado por pessoas que já caminham, em diferentes estágios. Isso enriquece.<br><br>É seguro? Sim. Três viagens anteriores, parceiros locais que conhecem nossas necessidades, hotéis testados, rotas planejadas. Não é aventura improvisada — é imersão com estrutura.<br><br>O valor parece alto. Vou te dizer como eu vejo: o que essa jornada custa dividido por 16 dias é menos do que muitos cursos prometem em um fim de semana. E o que você vai levar, nenhum curso devolve."</div>
+    </div>
+
+    <div class="script">
+      <div class="s-label">Cena 07 · convite · 10:00 – 11:30</div>
+      <div class="s-line">"Esses templos existem independente de você ir. Os rituais acontecem toda manhã, com ou sem a sua presença. O Ganges continua correndo.<br><br>A pergunta é só uma: você quer estar lá quando isso acontecer?<br><br>Se a resposta é sim — ou se você está sentindo algo parecido com sim enquanto assiste a esse vídeo — então o próximo passo é simples: manda uma mensagem para mim ou para o João Paulo no WhatsApp. Não precisa ter certeza absoluta. Só precisa querer conversar.<br><br>Os detalhes completos estão na página abaixo desse vídeo. O grupo é pequeno por escolha — para que a experiência seja densa, não diluída. As vagas são limitadas e o prazo para fechar no melhor valor é agosto de 2026.<br><br>Nos vemos lá."</div>
+      <div class="s-note">Fecha com o Yuri em silêncio por 2 segundos. Sem fade musical abrupto. Corta.</div>
+    </div>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-label">Produção</div>
+    <p><strong>Câmera:</strong> celular em 4K, tripé, luz natural de janela lateral. Sem ring light. <strong>Áudio:</strong> lapela discreta. <strong>Edição:</strong> cortes limpos, sem efeito. Os b-rolls de templos servem como respiro — nunca como distração do que o Yuri está dizendo. Legenda em português, automática ou manual. Hospedar no YouTube (não listado) ou no Panda Video e embedar na landing page.</p>
+  </div>
+</div>
+
+<!-- ══ CAP 04 ══ -->
+<div class="chapter" id="instagram">
+  <span class="chapter-label">Capítulo 04</span>
+  <h2>Instagram — calendário 16 semanas</h2>
+  <p class="intro">O Instagram tem uma função só nessa estratégia: fazer a pessoa querer assistir ao vídeo de vendas. Não vender o pacote. Não listar o roteiro. Despertar o desejo de ir — e a confiança de que o Yuri é quem vai conduzir.</p>
+
+  <div class="callout">
+    <div class="callout-label">Frequência</div>
+    <p><strong>3 entregas por semana:</strong> 1 reels + 1 carrossel ou post estático + stories diários (não precisa ser todos os dias — 4 a 5 por semana é suficiente para manter presença). Reels é o maior driver de alcance. Carrossel é o que faz a pessoa parar e ler. Stories é onde a confiança se constrói.</p>
+  </div>
+
+  <!-- FASE 1 -->
+  <div class="section" id="fase1">
+    <h3>Fase 1 — Semear o desejo (maio · semanas 1 a 4)</h3>
+    <p>Ainda não falamos da Yātra. Falamos sobre o que ela representa: por que ir pessoalmente importa, o que esses lugares guardam, o que é a tradição que vamos visitar. O objetivo é fazer o público sentir o gap — e querer preenchê-lo.</p>
+
+    <div class="week-grid">
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 1</span><span class="wt">Abrindo o mapa</span><span class="wp">maio</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"O que é uma Yātra?"</strong> — Yuri, 60 seg, câmera no rosto. Explica a diferença entre turismo e peregrinação sem nunca citar o produto. Fecha com: "Nos próximos meses, vou te contar o que aprendi fazendo três delas."</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Mapa estilizado da rota</strong> — os 7 lugares com o nome em sânscrito. Legenda: o que une esses pontos além da geografia.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Enquete: "Você já pensou em ir à Índia de verdade?" + caixa aberta: "Qual o seu maior medo sobre viajar para lá?"</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 2</span><span class="wt">Varanasi antes do sol</span><span class="wp">maio</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"O que acontece quando você vai a Varanasi de verdade"</strong> — Yuri conta uma cena específica de uma das viagens anteriores. Não é um relato turístico — é uma experiência pessoal. Detalhe sensorial: o som, o cheiro, o que sentiu no corpo.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>O que é o Rudrabhisheka</strong> — slide a slide, explicando o ritual que faremos em Varanasi. Linguagem acessível, sem simplificar.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Bastidores: Yuri mostra um objeto que trouxe de uma viagem anterior. Uma mala, uma foto, uma pedra. Conta de onde veio sem precisar de muito texto.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 3</span><span class="wt">O sânscrito que muda tudo</span><span class="wp">maio</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Por que sânscrito muda a experiência dentro de um templo"</strong> — Yuri mostra ao vivo: recita um mantra sem entender x recita sabendo o que está dizendo. A diferença é perceptível mesmo para quem assiste pela tela.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>5 coisas que mudaram em mim depois de peregrinar</strong> — pessoal, não genérico. Observações reais do Yuri sobre si mesmo antes e depois.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Caixa de perguntas: "Qual dessas tradições você já pratica? Yoga / Sânscrito / Ayurveda / Meditação / Filosofia Indiana." Mostra os resultados e comenta.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 4</span><span class="wt">Kathmandu real</span><span class="wp">maio</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Kathmandu não é o que você imagina"</strong> — desmonta o estereótipo turístico. Mostra o que há lá que nenhum guia de viagem menciona: a densidade espiritual do lugar, o tantrismo vivo, Pashupatinath.</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content">Foto poderosa de um templo + legenda curta: uma única pergunta que a visita colocou na cabeça do Yuri. Sem resposta. Só a pergunta.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Primeiro teaser: "Estou preparando algo. Em breve." Sem revelar o quê. Cria antecipação sem hype.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="section" id="fase2">
+    <h3>Fase 2 — Revelar a proposta (junho · semanas 5 a 8)</h3>
+    <p>Aqui a Yātra entra em cena. O conteúdo começa a falar da viagem, mas sempre pela porta da transformação — nunca pela porta do pacote.</p>
+
+    <div class="week-grid">
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 5</span><span class="wt">Lançamento do vídeo</span><span class="wp">junho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>Teaser de 30 seg</strong> — cenas mais impactantes do vídeo de vendas. Sem narração, só música ambiente e corte seco. Termina com: "Vídeo completo no link da bio."</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Anúncio oficial da Yātra</strong> — imagem limpa, texto direto: "Estamos abrindo as vagas. Grupo pequeno, outubro de 2026. Se você sente que é hora, o link está na bio."</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Sequência de 5: o que é a Yātra (1 slide) → as 7 cidades (1 por slide, rápido) → "Assista ao vídeo completo" com link.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 6</span><span class="wt">Vagas abertas</span><span class="wp">junho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Por que o grupo vai ser pequeno"</strong> — Yuri explica a escolha de limitar vagas. Não como escassez de marketing — como decisão pedagógica e espiritual genuína.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>O que está incluso — e o que não está</strong> — claro, sem asterisco. Esse carrossel salva muita conversa de WhatsApp depois.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Yuri responde ao vivo as perguntas que chegaram. Sem script. Exatamente como ele responderia no WhatsApp.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 7</span><span class="wt">Haridwar e Rishikesh</span><span class="wp">junho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"O Aarti de Har Ki Pauri — o que é e o que você vai sentir"</strong> — Yuri descreve a cerimônia com precisão sensorial. Imagens de fundo se houver; se não, só a fala já basta.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>A diferença entre Haridwar e Rishikesh</strong> — para quem não conhece, são a mesma coisa. Mostrar que não são, e por que as duas importam.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Pergunta direta: "O que te impede de ir?" — caixa aberta. Yuri responde uma a uma nos stories seguintes.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 8</span><span class="wt">O curso pré-viagem</span><span class="wp">junho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Por que o curso de sânscrito vem antes da viagem"</strong> — Yuri demonstra: recitar um mantra sem saber o que diz vs. recitar com consciência. A diferença dentro de um templo.</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Um mantra que vamos cantar na Yātra</strong> — transliteração + tradução + onde é cantado. Engaja quem já pratica e desperta curiosidade em quem está começando.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Mini-aula: Yuri ensina a pronúncia de uma palavra em sânscrito relacionada à viagem. Funcional, não decorativo.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 3 -->
+  <div class="section" id="fase3">
+    <h3>Fase 3 — Provar e aprofundar (julho · semanas 9 a 12)</h3>
+    <p>Aqui o conteúdo tem que trabalhar a objeção principal: o valor. Não reduzindo o preço — aumentando o valor percebido. Mostrando o que está sendo comprado para além do itinerário.</p>
+
+    <div class="week-grid">
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 9</span><span class="wt">Prova social</span><span class="wp">julho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>Depoimento de aluno</strong> — alguém que já viajou com o Yuri ou que estudou com ele e pode falar sobre a transformação. Não precisa ser da Yātra — pode ser de um curso. O que importa é a autenticidade.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>"O que aprendi em cada cidade"</strong> — Yuri escreve uma frase real sobre o que cada lugar ensinou a ele. Pessoal, não turístico.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Contador: "X vagas confirmadas. Ainda há Y disponíveis." Sem drama — como informação, não como pressão.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 10</span><span class="wt">As deidades</span><span class="wp">julho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Quem é Kali — e o que você vai sentir em Dakshinkali"</strong> — Yuri explica a tradição śākta de forma acessível. Não assusta. Contextualiza. Quem já estuda vai reconhecer; quem está chegando vai querer saber mais.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>As deidades que vamos encontrar na Yātra</strong> — um por slide, com o nome em devanagari, transliteração e uma frase sobre o que cada uma representa.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Caixa: "Qual dessas deidades você mais se identifica?" — Yuri comenta as respostas.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 11</span><span class="wt">A logística que liberta</span><span class="wp">julho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Por que a logística bem feita é parte da experiência espiritual"</strong> — Yuri fala sobre o que acontece quando você não precisa se preocupar com o hotel, o transporte, a comida. Você fica disponível para o que importa.</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Os hotéis — um por um</strong> — fotos dos hotéis confirmados com uma frase sobre por que cada um foi escolhido. Funcional e acolhedor ao mesmo tempo.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Yuri mostra o roteiro dia a dia de forma visual — sem texto excessivo. Só os lugares e o que vai acontecer em cada um.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 12</span><span class="wt">O valor</span><span class="wp">julho</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"O que US$ 3.100 compram de verdade"</strong> — Yuri quebra o valor em componentes sem ser chato: o curso pré-viagem, os rituais, as 14 noites, os voos internos, a curadoria. Depois pergunta: "E o que você vai levar no coração — quanto vale isso?"</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>À vista vs. parcelado — todas as opções</strong> — transparência total. Quem tem dúvida sobre o pagamento não precisa ir ao WhatsApp só para perguntar isso.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Yuri responde a objeção mais comum: "Não tenho dinheiro agora." Não finge que é simples — mas mostra o caminho do parcelamento com honestidade.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 4 -->
+  <div class="section" id="fase4">
+    <h3>Fase 4 — Colher (agosto · semanas 13 a 16)</h3>
+    <p>Últimas semanas antes do prazo de preço. O conteúdo cria urgência real — não artificial. As vagas estão diminuindo de fato. O prazo existe de verdade. Só comunicar isso com clareza já é suficiente.</p>
+
+    <div class="week-grid">
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 13</span><span class="wt">Urgência real</span><span class="wp">agosto</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"Agosto é o prazo — e aqui está o porquê"</strong> — Yuri explica a lógica por trás do prazo: reservas de hotel, passagens internas, organização do grupo. Sem drama, só razão prática.</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Vagas restantes</strong> — número real, sem inflação. "Restam X vagas para o preço atual."</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Story de colheita: "Se você está assistindo isso e ainda não entrou em contato, o que está faltando? Me manda uma mensagem." Direto, sem pressão.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 14</span><span class="wt">Quem já confirmou</span><span class="wp">agosto</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>Depoimento de quem já confirmou vaga</strong> — o que essa pessoa sentiu quando tomou a decisão. Sem roteiro. Pode ser um áudio de WhatsApp viralelado no reels.</div></div>
+          <div class="week-day"><span class="format post">Carrossel</span><div class="content"><strong>"Perguntas que eu mais recebi sobre a Yātra"</strong> — as 8 perguntas reais que chegaram no WhatsApp, respondidas de forma definitiva.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Yuri mostra o grupo se formando — sem revelar identidades se não houver autorização. Pode ser o número de mensagens recebidas, o mapa com os estados de origem dos participantes.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 15</span><span class="wt">Penúltima chamada</span><span class="wp">agosto</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>"O que acontece depois que você decide ir"</strong> — Yuri conta o processo: a conversa inicial, o contrato, o curso pré-viagem, como a preparação começa antes de embarcar. Tira o mistério do "e agora?"</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Últimas vagas</strong> — imagem minimalista, texto direto, link na bio.</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Sequência de reativação: "Você me perguntou sobre a Yātra há algumas semanas. Ainda está pensando? O prazo é essa semana." Para quem já interagiu antes.</div></div>
+        </div>
+      </div>
+
+      <div class="week">
+        <div class="week-header"><span class="wn">Semana 16</span><span class="wt">Encerramento</span><span class="wp">agosto</span></div>
+        <div class="week-body">
+          <div class="week-day"><span class="format reels">Reels</span><div class="content"><strong>Yuri, câmera, simples:</strong> "Hoje é o último dia para garantir o valor atual. Se você ainda está pensando, pensa hoje. O grupo está quase completo e eu quero que você esteja lá."</div></div>
+          <div class="week-day"><span class="format post">Post</span><div class="content"><strong>Encerramento das inscrições no preço atual</strong> — não precisa ser dramático. "Fechamos o prazo. Obrigado a quem confirmou. Para quem ficou de fora desta vez — fique de olho no que vem por aí."</div></div>
+          <div class="week-day"><span class="format story">Stories</span><div class="content">Agradecimento genuíno. Sem venda. O grupo está formado — agora começa a preparação.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAP 05 ══ -->
+<div class="chapter" id="roteiros-posts">
+  <span class="chapter-label">Capítulo 05</span>
+  <h2>Roteiros de posts e reels selecionados</h2>
+  <p class="intro">Estes são os conteúdos com maior potencial de impacto. Cada um tem um ângulo específico — e pode ser adaptado conforme o que o Yuri estiver vivendo no momento da gravação.</p>
+
+  <div class="section">
+    <h3>Reels 01 — "O que é uma Yātra"</h3>
+    <div class="script">
+      <div class="s-label">Roteiro completo · 60 a 90 segundos</div>
+      <div class="s-line action">[Yuri em câmera direta. Nenhuma introdução do tipo "oi, pessoal". Começa no meio.]</div>
+      <div class="s-line">"Yātra, em sânscrito, é a peregrinação. Não é uma palavra para viagem de lazer. É a palavra para o movimento que se faz por fora para chegar a alguma coisa por dentro.<br><br>Os antigos textos da tradição hindu dizem que certas cidades, certos rios, certos templos têm uma potência que não tem explicação intelectual. Você só entende pisando lá.<br><br>Eu fiz isso três vezes. E toda vez que volto, alguma coisa em mim mudou — de um jeito que os livros não conseguiriam fazer.<br><br>Nos próximos meses, vou te contar o que aprendi em cada lugar. E se o que você ouvir ressoar com algo que você já carrega — talvez seja hora de ir junto."</div>
+      <div class="s-note">Sem música na fala. Música ambiente suave no fundo se o Yuri preferir. Corte limpo no final, sem CTA verbal — o CTA vai na legenda e nos primeiros comentário.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Reels 02 — "Varanasi antes do sol"</h3>
+    <div class="script">
+      <div class="s-label">Roteiro completo · 90 segundos</div>
+      <div class="s-line">"Eram quatro da manhã quando descemos até o rio.<br><br>O Ganges naquela hora não tem a cor que você vê nas fotos. É escuro, quase preto. O barco sai em silêncio. E você fica olhando para a margem sem saber muito bem o que esperar.<br><br>Aí o primeiro sino toca. De longe. De um templo que você não vê ainda. E logo vem outro. E mais um. E o murmúrio começa — um murmúrio antigo, em sânscrito, que vem das margens.<br><br>E quando o sol finalmente aparece, o Ganges muda de cor. E você percebe que está assistindo a algo que acontece assim todo dia. Há milênios. Com ou sem você.<br><br>Essa cena nunca saiu de mim. E ela vai estar esperando por você também."</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Reels 03 — "O valor da Yātra"</h3>
+    <div class="script">
+      <div class="s-label">Roteiro · para responder a objeção de preço</div>
+      <div class="s-line">"Vou falar do valor da Yātra de uma forma que raramente vejo alguém falar.<br><br>US$ 3.100 parecem muito ou pouco dependendo do que você compara. Se você compara com uma viagem de lazer, pode parecer caro. Se você compara com um retiro de fim de semana — o que você pagou por isso nos últimos anos? — talvez não pareça tanto.<br><br>Mas a comparação que mais me faz sentido é outra: o que vai mudar em você depois de ter estado em Varanasi de verdade? Depois de ter feito o Rudrabhisheka dentro de um templo de pedra com mil anos? Depois de ter cantado um mantra entendendo o que cada sílaba significa?<br><br>Isso não tem preço fixo. Mas tem um custo. E esse custo é o que a Yātra cobre.<br><br>O parcelamento em 12 vezes existe para quem precisa. O link está na bio."</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAP 06 ══ -->
+<div class="chapter" id="whatsapp">
+  <span class="chapter-label">Capítulo 06</span>
+  <h2>Scripts de WhatsApp</h2>
+  <p class="intro">O WhatsApp é onde a venda acontece. Não há automação aqui — é conversa humana. Mas ter um ponto de partida ajuda a não perder o fio quando chegam muitas mensagens ao mesmo tempo.</p>
+
+  <div class="section">
+    <h3>Primeira resposta — quando a pessoa chega fria</h3>
+    <div class="callout vermilion">
+      <div class="callout-label">Script — João Paulo ou Yuri</div>
+      <p>Oi, [nome]! Que bom que você chegou aqui.<br><br>Você já assistiu ao vídeo na landing page? Ele explica muito bem o que é a Yātra e o que vai acontecer nos 16 dias. Se ainda não assistiu, recomendo — facilita muito a conversa depois.<br><br>Se já assistiu e tiver dúvidas, pode perguntar à vontade. Estou aqui.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Quando a pessoa diz "está caro"</h3>
+    <div class="callout vermilion">
+      <div class="callout-label">Script</div>
+      <p>Entendo. É um investimento real, não vou fingir que não é.<br><br>O que você está pagando inclui 14 noites de hospedagem com café e jantar, dois voos internos, trem, transporte em van durante toda a viagem, guia local bilíngue, todas as taxas de entrada, e o curso de sânscrito que começa antes de embarcar.<br><br>E claro — a curadoria do Yuri em cada passo. Isso é o que não tem preço de catálogo.<br><br>Tem a opção de parcelamento em até 12 vezes. Quer que eu te mande os detalhes?</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Quando a pessoa está quase decidida mas hesita</h3>
+    <div class="callout vermilion">
+      <div class="callout-label">Script</div>
+      <p>Essa hesitação que você está sentindo agora — ela é muito parecida com o que a maioria das pessoas sente antes de dar um passo assim.<br><br>O que eu percebo é que quem está pronto para essa jornada já sente isso antes de ir. A dúvida não é "será que vale?" — é "será que é hora?"<br><br>Só você sabe responder isso. Mas se puder ajudar em alguma dúvida prática, pode perguntar.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Quando a pessoa confirma</h3>
+    <div class="callout gold">
+      <div class="callout-label">Script de boas-vindas</div>
+      <p>Que alegria, [nome]! Fico muito feliz que você vai estar na Yātra.<br><br>Vou te encaminhar agora o contrato e as instruções de pagamento. Em breve você também vai receber as informações sobre o curso de sânscrito pré-viagem.<br><br>A partir de agora, a jornada já começou.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAP 07 ══ -->
+<div class="chapter" id="trafego">
+  <span class="chapter-label">Capítulo 07</span>
+  <h2>Tráfego pago</h2>
+  <p class="intro">Meta Ads entra apenas quando o orgânico já estiver funcionando — porque o produto precisa de contexto para fazer sentido. Anunciar para quem nunca ouviu falar do Yuri raramente funciona para produtos de imersão espiritual.</p>
+
+  <div class="section">
+    <h3>Quando ativar</h3>
+    <p>Julho, quando a fase orgânica já criou base. Antes disso é dinheiro mal gasto.</p>
+
+    <h3>Campanhas prioritárias</h3>
+    <h4>1. Remarketing — quem visitou a landing page mas não converteu</h4>
+    <p>O público mais quente. Viu a página, assistiu (ou não) ao vídeo, não entrou em contato. O anúncio aqui é simples: <strong>"Você visitou a página da Yātra. O prazo está chegando. Vagas limitadas."</strong> Com link direto para o WhatsApp.</p>
+
+    <h4>2. Público similar ao dos seguidores do Yuri</h4>
+    <p>Lookalike de quem já segue, já engajou, já comprou algum curso. Meta Ads cria esse público a partir dos dados do Instagram. Criativo: o reels "O que é uma Yātra" — o conteúdo orgânico mais forte vai direto como anúncio.</p>
+
+    <h4>3. Interesses (menor prioridade)</h4>
+    <p>Yoga, meditação, hinduísmo, sânscrito, viagens espirituais. Público mais frio, mas pode valer em agosto para ampliar alcance. Limite de verba: 20% do budget total de anúncios.</p>
+
+    <div class="callout">
+      <div class="callout-label">Orçamento sugerido</div>
+      <p><strong>Julho:</strong> R$ 50/dia nos dois primeiros públicos. <strong>Agosto:</strong> escalar para R$ 100/dia nos públicos que convertirem melhor. Total estimado: R$ 3.000 a R$ 5.000 no período de aceleração. Para um produto de US$ 3.100, uma única conversão paga o investimento em anúncios várias vezes.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAP 08 ══ -->
+<div class="chapter" id="metricas">
+  <span class="chapter-label">Capítulo 08</span>
+  <h2>Métricas e decisões</h2>
+  <p class="intro">Métricas existem para tomar decisões, não para gerar relatório. Cada número tem uma pergunta associada — e uma ação se a resposta não for boa.</p>
+
+  <div class="section">
+    <table class="metric-table">
+      <thead>
+        <tr><th>Métrica</th><th>O que mede</th><th>Ação se estiver baixo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Taxa de retenção do reels</td><td>Se o conteúdo prende atenção</td><td>Mudar os primeiros 3 segundos. Começar no meio da história.</td></tr>
+        <tr><td>Cliques no link da bio</td><td>Se o Instagram está convertendo em visitas</td><td>Revisar o CTA dos posts. Adicionar mais Stories com swipe up.</td></tr>
+        <tr><td>Tempo médio na landing page</td><td>Se a página está segurando a visita</td><td>Verificar se o vídeo está carregando bem. Testar headline.</td></tr>
+        <tr><td>Taxa de plays no vídeo</td><td>Se as pessoas estão assistindo</td><td>Revisar a thumbnail. Mudar o texto abaixo do player.</td></tr>
+        <tr><td>Mensagens no WhatsApp</td><td>Se a proposta está gerando interesse real</td><td>Aumentar frequência de Stories com CTA direto para WhatsApp.</td></tr>
+        <tr><td>Taxa de conversão WhatsApp → contrato</td><td>Se o atendimento está fechando</td><td>Revisar scripts. Identificar a objeção mais repetida e criar conteúdo para ela.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ CAP 09 ══ -->
+<div class="chapter" id="pos">
+  <span class="chapter-label">Capítulo 09</span>
+  <h2>Pós-venda e fidelização</h2>
+  <p class="intro">A venda não termina quando o contrato é assinado. Começa aí uma segunda jornada — a preparação — que, bem feita, aumenta a qualidade da experiência e gera os depoimentos que vão vender a próxima edição.</p>
+
+  <div class="section">
+    <h3>Após a confirmação</h3>
+    <p>Enviar um e-mail ou mensagem de boas-vindas que deixe claro o que acontece agora: quando começa o curso de sânscrito, como funciona a comunicação do grupo, qual a próxima informação que vai chegar e quando.</p>
+    <p>Criar um grupo fechado no WhatsApp ou Telegram para os confirmados. Esse grupo não é para logística — é para começar a construir a comunidade antes de embarcar. O Yuri pode compartilhar uma reflexão por semana, um áudio, uma leitura. A jornada começa aí.</p>
+
+    <h3>Durante a viagem</h3>
+    <p>Conteúdo gerado ao vivo, quando possível. Não para fazer stories turísticos — para mostrar ao público que ficou em casa o que está acontecendo. Isso alimenta a próxima edição organicamente: quem viu ao vivo vai querer estar lá na próxima vez.</p>
+
+    <h3>Depois da viagem</h3>
+    <p>Depoimentos coletados com calma — não no aeroporto. Uma semana depois, quando a experiência já assentou. Esses depoimentos são o ativo mais valioso para a comunicação da próxima Yātra.</p>
+    <p>Uma reunião online de integração com o grupo: o que cada um está levando, o que mudou, o que quer aprofundar. Isso cria vínculo, gera conteúdo autêntico e abre caminho para a próxima venda — seja de um curso, de uma nova Yātra ou de qualquer outro produto do Yuri.</p>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-label">A visão longa</div>
+    <p>Uma Yātra bem executada não vende só um pacote. Cria uma comunidade de pessoas que já foram, que vão querer voltar, que vão indicar para conhecidos e que vão virar prova viva do trabalho do Yuri. O retorno mais valioso não é financeiro — é reputacional. <strong>É o Yuri se tornando a referência incontestável em peregrinações à Índia e ao Nepal para praticantes brasileiros.</strong></p>
+  </div>
+</div>
+
+<div class="divider">॥ श्री विघ्नराजाय नमः ॥</div>
+
+</div><!-- /page -->
+
+<script>
+// Simple smooth close on toc link click
+document.querySelectorAll('.toc-list a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('toc').classList.remove('open'));
+});
+</script>
+</body>
+</html>
