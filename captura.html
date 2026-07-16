@@ -8,6 +8,26 @@
 <meta property="og:title" content="Yātra: preparando sua viagem espiritual à Índia"/>
 <meta property="og:description" content="Evento ao vivo e gratuito, dia 30/07 às 19h30. O que fazer, o que nunca fazer e um roteiro de curadoria para sua viagem à Índia e ao Nepal."/>
 <meta property="og:type" content="website"/>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1217417730189284');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Captura Yatra Evento 30-07'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1217417730189284&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -324,7 +344,7 @@ footer{
     <div class="state" id="state-success">
       <div class="state-icon">✦</div>
       <h2>Sua vaga está garantida.</h2>
-      <p>Enviamos o link e os lembretes do evento por e-mail e WhatsApp. Nos vemos dia 30/07 às 19h30. Namastê. 🙏</p>
+      <p>Estamos te levando ao grupo do WhatsApp com os detalhes do evento. Se não abrir automaticamente, <a href="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0" style="color:var(--saffron-soft)">toque aqui para entrar</a>. Namastê. 🙏</p>
     </div>
 
     <div class="state" id="state-error">
@@ -366,6 +386,7 @@ footer{
   var stateError = document.getElementById('state-error');
 
   var FORM_ENDPOINT = "/api/subscribe";
+  var WHATSAPP_GROUP = "https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0";
 
   waInput.addEventListener('input', function(){
     var v = waInput.value.replace(/\D/g,'').slice(0,11);
@@ -404,8 +425,14 @@ footer{
       headers: {'Content-Type':'application/json','Accept':'application/json'},
       body: JSON.stringify(payload)
     }).then(function(res){
-      if(res.ok){ form.classList.remove('active'); stateSuccess.classList.add('active'); }
-      else { throw new Error('Falha no envio'); }
+      if(res.ok){
+        // Evento Lead da Meta (dispara só quando o cadastro dá certo)
+        if(typeof fbq === 'function'){ fbq('track', 'Lead', {content_name: 'Cadastro Yatra Evento 30-07'}); }
+        form.classList.remove('active');
+        stateSuccess.classList.add('active');
+        // redireciona pro grupo do WhatsApp
+        setTimeout(function(){ window.location.href = WHATSAPP_GROUP; }, 1200);
+      } else { throw new Error('Falha no envio'); }
     }).catch(function(){
       btn.disabled = false;
       btn.textContent = 'Quero participar do evento ao vivo';
