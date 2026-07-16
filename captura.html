@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Yātra — Preparando sua viagem espiritual à Índia</title>
-<meta name="description" content="Evento ao vivo e gratuito: o que fazer e o que nunca fazer numa viagem à Índia e ao Nepal, com um roteiro de curadoria. Dia 30/07 às 19h30."/>
-<meta property="og:title" content="Yātra: preparando sua viagem espiritual à Índia"/>
-<meta property="og:description" content="Evento ao vivo e gratuito, dia 30/07 às 19h30. O que fazer, o que nunca fazer e um roteiro de curadoria para sua viagem à Índia e ao Nepal."/>
+<title>Yatra — Preparando sua viagem espiritual a India</title>
+<meta name="description" content="Evento ao vivo e gratuito: o que fazer e o que nunca fazer numa viagem a India e ao Nepal, com um roteiro de curadoria. Dia 30/07 as 19h30."/>
+<meta property="og:title" content="Yatra: preparando sua viagem espiritual a India"/>
+<meta property="og:description" content="Evento ao vivo e gratuito, dia 30/07 as 19h30. O que fazer, o que nunca fazer e um roteiro de curadoria para sua viagem a India e ao Nepal."/>
 <meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2315100B'/%3E%3Cg fill='none' stroke='%23E8932E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 14 L32 56'/%3E%3Cpath d='M18 20 Q18 12 20 8 Q22 14 24 16'/%3E%3Cpath d='M46 20 Q46 12 44 8 Q42 14 40 16'/%3E%3Cpath d='M18 20 Q24 20 32 22 Q40 20 46 20'/%3E%3Cpath d='M32 8 L32 22'/%3E%3Cpath d='M26 50 L38 50'/%3E%3C/g%3E%3C/svg%3E"/>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -33,415 +34,168 @@ src="https://www.facebook.com/tr?id=1217417730189284&ev=PageView&noscript=1"
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --ink:#15100B;--ink-2:#1E160E;--ink-3:#261A10;
-  --parch:#EFE3CB;--parch-2:#E4D5B0;--bone:#F4ECDA;
-  --saffron:#E8932E;--saffron-soft:#F0B566;
-  --vermilion:#B23A2E;--gold:#CBA24B;
+  --ink:#15100B;--bone:#F4ECDA;--parch:#EFE3CB;
+  --saffron:#E8932E;--saffron-soft:#F0B566;--vermilion:#B23A2E;--gold:#CBA24B;
   --text-light:#ECE0CB;--text-light-soft:#B7A684;
   --line-gold:rgba(203,162,75,.22);
-  --serif:"Fraunces",Georgia,serif;
-  --sans:"Inter",system-ui,sans-serif;
+  --serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,sans-serif;
   --maxw:660px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--sans);
-  background:
-    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(232,147,46,.10), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 100% 100%, rgba(178,58,46,.10), transparent 60%),
-    var(--ink);
-  color:var(--text-light);
-  -webkit-font-smoothing:antialiased;
-  line-height:1.7;
-  min-height:100vh;
-}
+body{font-family:var(--sans);background:radial-gradient(ellipse 900px 500px at 50% -10%, rgba(232,147,46,.10), transparent 60%),radial-gradient(ellipse 700px 500px at 100% 100%, rgba(178,58,46,.10), transparent 60%),var(--ink);color:var(--text-light);-webkit-font-smoothing:antialiased;line-height:1.7;min-height:100vh}
 ::selection{background:var(--saffron);color:var(--ink)}
+.wrap{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 20px 56px}
 
-.wrap{
-  position:relative;
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:0 20px 56px;
-}
-
-/* HERO */
-.hero{
-  position:relative;
-  margin:0 -20px 26px;
-  min-height:300px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  padding:70px 28px 30px;
-  text-align:center;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;inset:0;
-  background:url('/img/hero.jpg') center/cover no-repeat;
-  transform:scale(1.05);
-  z-index:0;
-}
-.hero::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,
-    rgba(21,16,11,.55) 0%,
-    rgba(21,16,11,.35) 35%,
-    rgba(21,16,11,.85) 85%,
-    var(--ink) 100%);
-  z-index:1;
-}
+/* HERO full-cover */
+.hero{position:relative;margin:0 -20px 26px;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 28px 34px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('data:image/jpeg;base64,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') center/cover no-repeat;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,16,11,.30) 0%,rgba(21,16,11,.18) 40%,rgba(21,16,11,.72) 82%,var(--ink) 100%);z-index:1}
 .hero > *{position:relative;z-index:2}
-
-.brand{
-  font-family:var(--serif);
-  font-size:.82rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  color:var(--bone);
-  margin-bottom:14px;
-}
+.brand{font-family:var(--serif);font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bone);margin-bottom:14px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .brand span{color:var(--saffron-soft)}
-
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  align-self:center;
-  font-size:.66rem;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--saffron-soft);
-  font-weight:600;
-  background:rgba(21,16,11,.4);
-  border:1px solid rgba(203,162,75,.35);
-  border-radius:999px;
-  padding:6px 14px;
-  margin-bottom:14px;
-  backdrop-filter:blur(4px);
-}
-.tag .dot{
-  width:6px;height:6px;border-radius:50%;
-  background:var(--saffron);
-  box-shadow:0 0 0 3px rgba(232,147,46,.25);
-}
-
-h1{
-  font-family:var(--serif);
-  font-weight:400;
-  font-style:italic;
-  font-size:clamp(1.9rem,5.4vw,2.8rem);
-  line-height:1.14;
-  color:var(--bone);
-  text-shadow:0 2px 20px rgba(0,0,0,.5);
-  max-width:520px;
-  margin:0 auto;
-}
+.tag{display:inline-flex;align-items:center;gap:8px;align-self:center;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron-soft);font-weight:600;background:rgba(21,16,11,.45);border:1px solid rgba(203,162,75,.4);border-radius:999px;padding:6px 14px;margin-bottom:14px;backdrop-filter:blur(4px)}
+.tag .dot{width:6px;height:6px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 3px rgba(232,147,46,.25)}
+h1{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(1.9rem,5.4vw,2.8rem);line-height:1.14;color:var(--bone);text-shadow:0 2px 22px rgba(0,0,0,.6);max-width:520px;margin:0 auto}
 h1 em{color:var(--saffron-soft);font-style:italic}
-
-.sub{
-  font-size:1rem;
-  color:var(--text-light-soft);
-  max-width:480px;
-  margin:0 auto 22px;
-  font-weight:300;
-  text-align:center;
-}
+.sub{font-size:1rem;color:var(--text-light-soft);max-width:480px;margin:0 auto 22px;font-weight:300;text-align:center}
 .sub strong{color:var(--parch);font-weight:500}
 
-/* CARD / FORM */
-.card{
-  width:100%;
-  max-width:440px;
-  margin:0 auto;
-  background:linear-gradient(180deg,rgba(244,236,218,.06),rgba(244,236,218,.02));
-  border:1px solid var(--line-gold);
-  border-radius:18px;
-  padding:28px 26px;
-  box-shadow:0 20px 60px -20px rgba(0,0,0,.6);
-}
-.card-title{
-  font-family:var(--serif);
-  font-size:1.1rem;
-  color:var(--bone);
-  text-align:center;
-  margin-bottom:18px;
-}
+.card{width:100%;max-width:440px;margin:0 auto;background:linear-gradient(180deg,rgba(244,236,218,.06),rgba(244,236,218,.02));border:1px solid var(--line-gold);border-radius:18px;padding:28px 26px;box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.card-title{font-family:var(--serif);font-size:1.1rem;color:var(--bone);text-align:center;margin-bottom:18px}
 .field{margin-bottom:15px;text-align:left}
-.field label{
-  display:block;
-  font-size:.67rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--text-light-soft);
-  margin-bottom:7px;
-}
-.field input{
-  width:100%;
-  padding:14px 16px;
-  background:rgba(21,16,11,.5);
-  border:1px solid var(--line-gold);
-  border-radius:10px;
-  color:var(--bone);
-  font-family:var(--sans);
-  font-size:.96rem;
-  outline:none;
-  transition:border-color .2s ease, box-shadow .2s ease;
-}
+.field label{display:block;font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light-soft);margin-bottom:7px}
+.field input{width:100%;padding:14px 16px;background:rgba(21,16,11,.5);border:1px solid var(--line-gold);border-radius:10px;color:var(--bone);font-family:var(--sans);font-size:.96rem;outline:none;transition:border-color .2s,box-shadow .2s}
 .field input::placeholder{color:var(--text-light-soft);opacity:.55}
 .field input:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,147,46,.15)}
 .field input.error{border-color:var(--vermilion)}
 .field .msg{font-size:.74rem;color:var(--saffron-soft);margin-top:6px;min-height:14px}
-
 .hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
-
-.btn{
-  width:100%;
-  padding:16px 20px;
-  margin-top:6px;
-  background:linear-gradient(135deg,var(--saffron),var(--vermilion));
-  color:var(--ink);
-  border:none;
-  border-radius:10px;
-  font-family:var(--sans);
-  font-weight:600;
-  font-size:.95rem;
-  cursor:pointer;
-  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
-  box-shadow:0 12px 30px -10px rgba(232,147,46,.5);
-}
+.btn{width:100%;padding:16px 20px;margin-top:6px;background:linear-gradient(135deg,var(--saffron),var(--vermilion));color:var(--ink);border:none;border-radius:10px;font-family:var(--sans);font-weight:600;font-size:.95rem;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .15s;box-shadow:0 12px 30px -10px rgba(232,147,46,.5)}
 .btn:hover{transform:translateY(-1px);box-shadow:0 16px 36px -10px rgba(232,147,46,.6)}
 .btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.6;cursor:default;transform:none}
-
 .trust{margin-top:14px;font-size:.72rem;color:var(--text-light-soft);opacity:.75;text-align:center}
-
 .state{display:none;text-align:center}
 .state.active{display:block}
 .state-icon{font-family:var(--serif);font-size:2.2rem;color:var(--saffron);margin-bottom:12px}
 .state h2{font-family:var(--serif);font-weight:400;font-size:1.4rem;color:var(--bone);margin-bottom:10px}
 .state p{font-size:.92rem;color:var(--text-light-soft);font-weight:300}
-
-.divider{
-  color:var(--line-gold);
-  font-family:var(--serif);
-  letter-spacing:.5em;
-  font-size:.9rem;
-  text-align:center;
-  margin:34px auto 26px;
-  user-select:none;
-}
-
-/* BENEFÍCIOS */
-.beneficios{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  margin:0 auto 30px;
-  text-align:left;
-  width:100%;
-  max-width:440px;
-}
-.beneficios li{
-  display:flex;align-items:flex-start;gap:12px;
-  font-size:.94rem;color:var(--text-light-soft);font-weight:300;
-}
-.beneficios li::before{content:"✦";color:var(--gold);font-size:.85rem;line-height:1.6;flex-shrink:0}
+.divider{color:var(--line-gold);font-family:var(--serif);letter-spacing:.5em;font-size:.9rem;text-align:center;margin:34px auto 26px;user-select:none}
+.beneficios{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0 auto 30px;text-align:left;width:100%;max-width:440px}
+.beneficios li{display:flex;align-items:flex-start;gap:12px;font-size:.94rem;color:var(--text-light-soft);font-weight:300}
+.beneficios li::before{content:"\2726";color:var(--gold);font-size:.85rem;line-height:1.6;flex-shrink:0}
 .beneficios strong{color:var(--parch);font-weight:500}
-
-/* GALERIA */
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  max-width:520px;
-  margin:0 auto 12px;
-}
-.galeria figure{
-  position:relative;
-  border-radius:12px;
-  overflow:hidden;
-  border:1px solid var(--line-gold);
-  aspect-ratio:1/1;
-}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:520px;margin:0 auto 12px}
+.galeria figure{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line-gold);aspect-ratio:1/1}
 .galeria img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
-.galeria figcaption{
-  position:absolute;left:0;right:0;bottom:0;
-  padding:14px 8px 7px;
-  font-size:.66rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--bone);
-  text-align:center;
-  background:linear-gradient(180deg,transparent,rgba(21,16,11,.85));
-}
-.galeria-legenda{
-  text-align:center;
-  font-size:.72rem;
-  color:var(--text-light-soft);
-  opacity:.7;
-  margin-bottom:8px;
-}
-
-footer{
-  margin-top:34px;
-  text-align:center;
-  font-size:.7rem;
-  color:var(--text-light-soft);
-  opacity:.6;
-  letter-spacing:.04em;
-}
-
-@media (max-width:480px){
-  .hero{min-height:230px;padding:52px 20px 24px;margin-bottom:22px}
-  .card{padding:24px 18px}
-}
+.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 8px 7px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bone);text-align:center;background:linear-gradient(180deg,transparent,rgba(21,16,11,.85))}
+.galeria-legenda{text-align:center;font-size:.72rem;color:var(--text-light-soft);opacity:.7;margin-bottom:8px}
+footer{margin-top:34px;text-align:center;font-size:.7rem;color:var(--text-light-soft);opacity:.6;letter-spacing:.04em}
+@media (max-width:480px){.hero{min-height:320px;padding:90px 20px 26px;margin-bottom:22px}.card{padding:24px 18px}}
 </style>
 </head>
 <body>
-
 <div class="wrap">
-
   <header class="hero">
-    <div class="brand">YĀTRA <span>· ÍNDIA &amp; NEPAL 2026</span></div>
-    <div class="tag"><span class="dot"></span>Evento ao vivo · 100% gratuito</div>
-    <h1>Preparando sua <em>viagem espiritual</em> à Índia</h1>
+    <div class="brand">YATRA <span>&middot; INDIA &amp; NEPAL 2026</span></div>
+    <div class="tag"><span class="dot"></span>Evento ao vivo &middot; 100% gratuito</div>
+    <h1>Preparando sua <em>viagem espiritual</em> a India</h1>
   </header>
 
   <p class="sub">
-    Aprenda o que fazer e o que nunca fazer numa viagem para a Índia e o
-    Nepal — e receba um roteiro com a minha curadoria. Ao vivo e online,
-    <strong>dia 30/07 às 19h30</strong>.
+    Aprenda o que fazer e o que nunca fazer numa viagem para a India e o
+    Nepal &mdash; e receba um roteiro com a minha curadoria. Ao vivo e online,
+    <strong>dia 30/07 as 19h30</strong>.
   </p>
 
   <div class="card">
-
     <form id="form-yatra" class="state active" novalidate>
       <div class="card-title">Garanta sua vaga gratuita</div>
-
       <div class="field">
         <label for="email">Seu melhor e-mail</label>
         <input type="email" id="email" name="email" placeholder="seunome@email.com" required autocomplete="email"/>
         <div class="msg" id="msg-email"></div>
       </div>
-
       <div class="field">
         <label for="whatsapp">WhatsApp (com DDD)</label>
         <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 91234-5678" required inputmode="numeric" autocomplete="tel"/>
         <div class="msg" id="msg-whatsapp"></div>
       </div>
-
       <input type="text" name="empresa" class="hp" tabindex="-1" autocomplete="off"/>
-
       <button type="submit" class="btn" id="btn-submit">Quero participar do evento ao vivo</button>
-      <p class="trust">Sem spam. Seus dados são usados só para falar sobre a Yātra.</p>
+      <p class="trust">Sem spam. Seus dados sao usados so para falar sobre a Yatra.</p>
     </form>
-
     <div class="state" id="state-success">
-      <div class="state-icon">✦</div>
-      <h2>Sua vaga está garantida.</h2>
-      <p>Estamos te levando ao grupo do WhatsApp com os detalhes do evento. Se não abrir automaticamente, <a href="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0" style="color:var(--saffron-soft)">toque aqui para entrar</a>. Namastê. 🙏</p>
+      <div class="state-icon">&#10022;</div>
+      <h2>Sua vaga esta garantida.</h2>
+      <p>Estamos te levando ao grupo do WhatsApp com os detalhes do evento. Se nao abrir, <a href="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0" style="color:var(--saffron-soft)">toque aqui para entrar</a>. 🙏</p>
     </div>
-
     <div class="state" id="state-error">
-      <div class="state-icon">✦</div>
-      <h2>Algo não saiu como esperado.</h2>
+      <div class="state-icon">&#10022;</div>
+      <h2>Algo nao saiu como esperado.</h2>
       <p>Tente novamente em instantes, ou nos chame diretamente pelo WhatsApp.</p>
     </div>
-
   </div>
 
-  <div class="divider">· · ·</div>
+  <div class="divider">&middot; &middot; &middot;</div>
 
   <ul class="beneficios">
-    <li><span><strong>O que fazer</strong> — o passo a passo pra chegar preparado, física e espiritualmente, pra Índia sagrada.</span></li>
-    <li><span><strong>O que nunca fazer</strong> — os deslizes culturais e espirituais que todo peregrino de primeira viagem comete.</span></li>
-    <li><span><strong>Um roteiro com curadoria de 16 dias</strong> — cada templo, cada parada, pensado pra sua jornada interior.</span></li>
+    <li><span><strong>O que fazer</strong> &mdash; o passo a passo pra chegar preparado, fisica e espiritualmente, pra India sagrada.</span></li>
+    <li><span><strong>O que nunca fazer</strong> &mdash; os deslizes culturais e espirituais que todo peregrino de primeira viagem comete.</span></li>
+    <li><span><strong>Um roteiro com curadoria de 16 dias</strong> &mdash; cada templo, cada parada, pensado pra sua jornada interior.</span></li>
   </ul>
 
   <div class="galeria">
-    <figure><img src="/img/nepal.jpg" alt="Boudhanath, Nepal" loading="lazy"/><figcaption>Nepal</figcaption></figure>
-    <figure><img src="/img/varanasi.jpg" alt="Kashi Vishwanath, Varanasi" loading="lazy"/><figcaption>Varanasi</figcaption></figure>
-    <figure><img src="/img/haridwar.jpg" alt="Har Ki Pauri, Haridwar" loading="lazy"/><figcaption>Haridwar</figcaption></figure>
+    <figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABIMDhAOCxIQDxAUExIVGy0dGxkZGzcoKiEtQjpFREA6Pz5IUWhYSE1iTj4/WntcYmtvdHZ0RleAiX9xiGhydHD/2wBDARMUFBsYGzUdHTVwSz9LcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHD/wgARCABPAHgDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/9oADAMBAAIQAxAAAAHmMGGuUlONjHBtjPZEcIhUjYYZHxeKzipU9TFydmZ5qNkSdTUwDsaGrrku7RU2DTYLXdzN2LO5+f0OKhVeGzkBBtrh3URetFxfpi2ehFjjonJdlhfnqaNPCuXXFslIpkD0O0lmnGTa8TJHjqUBTIKZNt//xAAgEAACAgIDAAMBAAAAAAAAAAAAAQIRISEQMUFRYXGB/9oACAEBAAEFAro7nZiEbd5TYpWN4eky8yxxfFcVhFlY0UZLs0LKa68Is8NnpJXIeSiWVEmMirKp5r3FJIfEjJQ9ZJGuMGWqGimK228ursbGey3EpDNL9bgtfGTVlDSZ6ey4wLdLskkQd8J0OROnxLeSiV3eLHg2I7Dky/r2teLU/wCl8jGMeRmTRCrl14s2rVv68ZNEi8qqcrKx1O4mXFlpHbhr62frz//EACIRAAICAgICAwEAAAAAAAAAAAABAhEDEBIhMRMgIkFCUf/aAAgBAwEBPwFTMcdUXy51krnHHq+b4yZHKWximpxvhEnSsi7QmSfi+PjT1lRl2b6EZZfRCSSdjzrayWRPHx5EMqa4bt2TXR0OVdI/F8Wxv8AhVjjZRpszWOupOGroQyih9iNmXZqxe2PxXQ5PUXcbI+uIdMxej//xAAiEQACAgICAwEBAAAAAAAAAAAAAQIREiEQMSAiQVFhcf/aAAgBAgEBPwFbMcdUXy51krnHHq+b4yZHKWximpxvhEnSsi7QmSfi+PjT1lRl2b6EZZfRCSSdjzrayWRPHx5EMqa4bt2TXR0OVdI/F8Wxv8AhVjjZRpszWOupOGroQyih9iNmXZqxe2PxXQ5PUXcbI+uIdMxej//xAAlEAABBAEEAgEFAQAAAAAAAAAAARARIRAgMUFRYXEwgZGx0eH/2gAIAQEABj8CaVw1GxKbCKKexWh1laIQhr0edGT2YaupM9GegmuNVdNWsXWmpepTWRsU96IFfJRgkWcoKQeNH0WW6tZ4bDVxFqfItCGDJkSDL9qnaYbKGV/ClX8MqY/THCh3GTGhLMtZhlllQkvRseXpYKs5iSW5uH6aFpTJHyyURFCwhdr7Enh/pu2MvucyqcpamTuO6T//xAAkEAADAAICAgICAwEAAAAAAAAAAREhMUFRYXEQgZGhscHR8P/aAAgBAQABPyFKrf4LX0PGYTnA0y/sOnfsNcHYw21wyWI9HBhvkXlmC32OFhgpjQybiWF8ClYluefhZhxhKIji/BVLuqGG5oWJryLlzX0Nz/AzSYoqaunA4WsjCWUKWm9ckCn2a8i10T7RrMOm0zLx2KGN0aNOUeeBJwNrhkqeTDUjmCDvtnBgeBITyQ/jMV23Ru4rY4ab9Go1Daar0Sx/pW3siPBDfw1Q8OmrecEDUZFQSoxZXorIuD8uh4OmEPfxQtci2MbMNQ07kTczZS9xPgUnA2b+eSvKDQL4NhVJjQyqyrniYGv2KyyhG3nybIM1Q3VrLJmTEEnP5RKIafhirAia8CrfwHEtUgYjXgdKPzw9/DRxFiohjcCuLOkNJbkaLsWv+ip0YzbHjY1IKm0Is1dCK0JIwpPgizwhcCNaSnqj7GPkR+hOJJIajBNCbYl4IvJcCSohVwchnodxrehUUONa3weOgksjgfLBfOyIZ+nyaal6Eg2huk/sMTt5HbT6PdiISF2p9QRL2B/4YXC03qhE19ATI+yROKncZyQm8uBoQvHjA6H9CxTIoufwXgd9Cdn6brX6PrdtPXgQ55o+u4yafamC0sTIm0m4NG8fYn6ySuQ3B4hiXGoJ7PoefZPQ1WyZubGyhJOTM76OFxd4Ey48xooPBqHYy6HAm5G2BzYh+i00nK5JE7yKMGdgs+TgNQq+yO+BtwWrQT9ht8R2xaJbnJFbyEJd5H6Kd5Hwca9KicgeBSyNtJzAm2TwhENf0GuMFxSU4+h//9oADAMBAAIAAwAAABAeaw0CCnONWFHTWwFRZ/oLrLzPtfDZBvGHORw2eLHuLvfm1nLug+cj6oDxz7zyDwL/xAAeEQEAAgMBAAMBAAAAAAAAAAABABEhMUFRECBhcYEwkaGxwf/aAAgBAwEBPxBn+fkw2jUUxwKEXGSYHu5bjHcuS4JV+FsQFVACVRzks5HYuwKolDUTEb0fPmXOQzfhjczFQWDFATyhJhJUGCIXMpOkLajFLcy2RbzGoKMVhlPj3oi0LqXDU5FxVRPEHM1M4wvNZ+pSHn6lq9Lm5M29xIGAw1yf/8QAIBEBAQEAAgIDAAMAAAAAAAAAAQARITFBUWFxgbEQkbHR/9oACAECAQE/ENox5O2wQ84xy93Oes/v/ITzEB7W2WJr3smEa8vN93EwgZeLNbkyAb4khRdP7MGslNwLxgLGHRNkeHiw3erdbty5x/hkjfSCJuDujt7kWwuLlaWwAGCdWRy29UnE/YKcEB6tZxaXU6uT1JDifdCPuH6JuX3Pk+V5nuBuObgEu8PcQck6N8t//xAAkEAEAAwACAgIDAQEAAAAAAAABABEhMUFRYXGBkaGx0cHh8P/aAAgBAQABPxAA2Hb5PJOcKrbXjxEK1bV6OiGMeiHEJi1McG7Ar2TAS8yIx2xS27qDcEFpZYlGOTdB6iA7izwRWUAJNTg2zHUIWw0AD4gKqtjdQFwdba+2AiD5XtlgTiuPUAakBVnz3O/l15VKTaIHiVPuHbdhrAjAxgEGNYPfuASOpvQlhKDz5J0zG0gJT0q8oihdBjAqYPsTLTd7MbKUB6ZwKKCvSRZVIvCckbXOBtcpKa8XeP8AIiBHat9BLmhXF8wyb9DNIDDfGviBF5PC+Ynb7ac+oocDoF/csJpwLrOtcPxBODspG7EAyzidJYDZNaMvHquYlzBspOoFsJZoOmYXGoGJRXAKOIF4h4OUQcn0tsssYCz0xW2GnaS/MOnUcwiMWz7WPtNWKJ6i8fyI7ZQofmJGnH9nNW8n+xA1lae40sPFQikF5AUBeC+pTzuiBXJeFKVqroVAVG+pgV11NWqWvX4lCLpezqO8W3pbdM0Dx15lDjTi2MKe0/c5BsUq76nUBWFF0y1QXomBGlQbah5li92aPVQqsWrbjVXcUviBgl10CHiGW/Nn3KFFrqVEHAu4aZSN1VZLirqVqu2oYAVOX3KENeR0xFvFTvPz5l6UOT+iOSt1I4fEGOVFsfRkregUfcVj0sfWxQVLsw8x0u0GFBEAF2kDbHiDbKK6uojHS1ufEoVXqbHfzLKolos2XSFusU4gRCtras/UseYCGfcrTpzBuSAl80S4RY79QUqFG1yRNJGcOy0QJe3IsLjtuAIQAC55GoM0JoFzdawKIB7G7hTS8jiasBHqfdDiJKBsdqPNMvDsOZgQ2OTuUhRQytv8QbwD2gQc48cMEB4HyV16i1CBQrUtiwqnJHxYcBH3AEIsOX3DiDbsLuFyik5H/wBkIdjNX6RkBoFptdkKLouIeVlRFrocRUQqOMgoQKHLNoXXoyGl2ClG39EHYmUP9RgQE8EuWAqrrbdReG7ONqONjxKQAEcv/GE3Remslav6qgw5Pl/HMA8DdLsG3m2zw/MHi4+qEbPAp2/qBL8Yf7OT6bjamQMqC0dwAIDYrT3FriIEBjpW4LCMJz1/yP8AqyV38TSLnufLfwT+z4LfT/IaEA6Cu+fUKodB7S/7aEv5qviVUEwzjf5BarVCv4/2AUwwDaimF0uo1RtV7CNMWoC8S9VG03fMcoGqpzWBBwpaqeWEqVwujfMxhFV4XbEpa6F3Z46hBKpP6IMGUBabiPUFRV6h8MUjQWtqM9MeSNI348y3ufRod9wsAJz2pjDh1UD1CUah1+IzWjNZWUv6jsTl1KfcMlGtAld59kcJRRoLv33UClaKtfwr8Q8sv2VL03utu/ibcdll39dR5i7UtyN3gdcNhoUBFpEtwHlm/wCxJYAGlzqwttjkZGsdWI8yjXE2Hu4AbQuhy3/qf//Z" alt="Nepal"/><figcaption>Nepal</figcaption></figure>
+    <figure><img src="data:image/jpeg;base64,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" alt="Varanasi"/><figcaption>Varanasi</figcaption></figure>
+    <figure><img src="data:image/jpeg;base64,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" alt="Haridwar"/><figcaption>Haridwar</figcaption></figure>
   </div>
   <div class="galeria-legenda">Alguns dos destinos sagrados da jornada</div>
 
-  <footer>Yātra · Índia &amp; Nepal 2026 — uma jornada de preparação espiritual</footer>
-
+  <footer>Yatra &middot; India &amp; Nepal 2026 &mdash; uma jornada de preparacao espiritual</footer>
 </div>
 
 <script>
 (function(){
-  var form = document.getElementById('form-yatra');
-  var btn = document.getElementById('btn-submit');
-  var emailInput = document.getElementById('email');
-  var waInput = document.getElementById('whatsapp');
-  var msgEmail = document.getElementById('msg-email');
-  var msgWa = document.getElementById('msg-whatsapp');
-  var stateSuccess = document.getElementById('state-success');
-  var stateError = document.getElementById('state-error');
-
-  var FORM_ENDPOINT = "/api/subscribe";
-  var WHATSAPP_GROUP = "https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0";
-
-  waInput.addEventListener('input', function(){
-    var v = waInput.value.replace(/\D/g,'').slice(0,11);
-    if(v.length > 6){ v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7); }
-    else if(v.length > 2){ v = '(' + v.slice(0,2) + ') ' + v.slice(2); }
-    else if(v.length > 0){ v = '(' + v; }
-    waInput.value = v;
+  var form=document.getElementById('form-yatra'),btn=document.getElementById('btn-submit'),
+  emailInput=document.getElementById('email'),waInput=document.getElementById('whatsapp'),
+  msgEmail=document.getElementById('msg-email'),msgWa=document.getElementById('msg-whatsapp'),
+  stateSuccess=document.getElementById('state-success'),stateError=document.getElementById('state-error');
+  var FORM_ENDPOINT="/api/subscribe";
+  var WHATSAPP_GROUP="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0";
+  waInput.addEventListener('input',function(){
+    var v=waInput.value.replace(/\D/g,'').slice(0,11);
+    if(v.length>6){v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);}
+    else if(v.length>2){v='('+v.slice(0,2)+') '+v.slice(2);}
+    else if(v.length>0){v='('+v;}
+    waInput.value=v;
   });
-
-  function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-  function isValidPhone(v){ return v.replace(/\D/g,'').length >= 10; }
-  function setError(input, msgEl, text){ input.classList.add('error'); msgEl.textContent = text; }
-  function clearError(input, msgEl){ input.classList.remove('error'); msgEl.textContent = ''; }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var ok = true;
-    if(!isValidEmail(emailInput.value.trim())){ setError(emailInput, msgEmail, 'Digite um e-mail válido.'); ok = false; }
-    else { clearError(emailInput, msgEmail); }
-    if(!isValidPhone(waInput.value)){ setError(waInput, msgWa, 'Digite um WhatsApp válido, com DDD.'); ok = false; }
-    else { clearError(waInput, msgWa); }
-    if(form.empresa && form.empresa.value){ return; }
-    if(!ok) return;
-
-    btn.disabled = true;
-    btn.textContent = 'Enviando...';
-
-    var payload = {
-      email: emailInput.value.trim(),
-      whatsapp: waInput.value.trim(),
-      origem: 'captura-yatra-india-2026'
-    };
-
-    fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(payload)
-    }).then(function(res){
+  function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+  function isValidPhone(v){return v.replace(/\D/g,'').length>=10;}
+  function setError(i,m,t){i.classList.add('error');m.textContent=t;}
+  function clearError(i,m){i.classList.remove('error');m.textContent='';}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();var ok=true;
+    if(!isValidEmail(emailInput.value.trim())){setError(emailInput,msgEmail,'Digite um e-mail valido.');ok=false;}else{clearError(emailInput,msgEmail);}
+    if(!isValidPhone(waInput.value)){setError(waInput,msgWa,'Digite um WhatsApp valido, com DDD.');ok=false;}else{clearError(waInput,msgWa);}
+    if(form.empresa&&form.empresa.value){return;}
+    if(!ok)return;
+    btn.disabled=true;btn.textContent='Enviando...';
+    var payload={email:emailInput.value.trim(),whatsapp:waInput.value.trim(),origem:'captura-yatra-india-2026'};
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+    .then(function(res){
       if(res.ok){
-        // Evento Lead da Meta (dispara só quando o cadastro dá certo)
-        if(typeof fbq === 'function'){ fbq('track', 'Lead', {content_name: 'Cadastro Yatra Evento 30-07'}); }
-        form.classList.remove('active');
-        stateSuccess.classList.add('active');
-        // redireciona pro grupo do WhatsApp
-        setTimeout(function(){ window.location.href = WHATSAPP_GROUP; }, 1200);
-      } else { throw new Error('Falha no envio'); }
+        if(typeof fbq==='function'){fbq('track','Lead',{content_name:'Cadastro Yatra Evento 30-07'});}
+        form.classList.remove('active');stateSuccess.classList.add('active');
+        setTimeout(function(){window.location.href=WHATSAPP_GROUP;},1200);
+      }else{throw new Error('fail');}
     }).catch(function(){
-      btn.disabled = false;
-      btn.textContent = 'Quero participar do evento ao vivo';
-      form.classList.remove('active');
-      stateError.classList.add('active');
+      btn.disabled=false;btn.textContent='Quero participar do evento ao vivo';
+      form.classList.remove('active');stateError.classList.add('active');
     });
   });
 })();
 </script>
-
 </body>
 </html>
