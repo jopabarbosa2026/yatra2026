@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/event", "destination": "/captura.html" },
+    { "source": "/event/", "destination": "/captura.html" }
+  ]
+}
