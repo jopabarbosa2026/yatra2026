@@ -336,13 +336,11 @@ footer{
 
   // ==========================================================
   // ENDPOINT DO FORMULÁRIO
-  // Troque a URL abaixo pelo seu endpoint real (Formspree, Getform,
-  // um Webhook/Zapier, ou uma função serverless na Vercel).
-  // Se preferir hospedar na Netlify, basta adicionar o atributo
-  // data-netlify="true" e name="yatra-captura" na tag <form> acima
-  // que o Netlify Forms passa a capturar automaticamente.
+  // Aponta pra função serverless /api/subscribe.js (Vercel), que
+  // cria o contato direto na Brevo usando BREVO_API_KEY (variável
+  // de ambiente configurada no painel da Vercel).
   // ==========================================================
-  var FORM_ENDPOINT = "COLE-SEU-ENDPOINT-DE-FORMULARIO-AQUI";
+  var FORM_ENDPOINT = "/api/subscribe";
 
   // máscara simples de telefone BR
   waInput.addEventListener('input', function(){
@@ -406,17 +404,6 @@ footer{
       whatsapp: waInput.value.trim(),
       origem: 'captura-yatra-india-2026'
     };
-
-    if(FORM_ENDPOINT.indexOf('COLE-SEU-ENDPOINT') === 0){
-      // Endpoint ainda não configurado: simula sucesso para não travar
-      // a experiência em preview/local. Configure FORM_ENDPOINT acima
-      // antes de publicar a página em produção.
-      setTimeout(function(){
-        form.classList.remove('active');
-        stateSuccess.classList.add('active');
-      }, 500);
-      return;
-    }
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
