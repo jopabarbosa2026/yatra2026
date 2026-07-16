@@ -17,12 +17,11 @@
   --parch:#EFE3CB;--parch-2:#E4D5B0;--bone:#F4ECDA;
   --saffron:#E8932E;--saffron-soft:#F0B566;
   --vermilion:#B23A2E;--gold:#CBA24B;
-  --text-dark:#2A2014;--text-dark-soft:#5B4A33;
   --text-light:#ECE0CB;--text-light-soft:#B7A684;
   --line-gold:rgba(203,162,75,.22);
   --serif:"Fraunces",Georgia,serif;
   --sans:"Inter",system-ui,sans-serif;
-  --maxw:640px;
+  --maxw:660px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -36,148 +35,129 @@ body{
   -webkit-font-smoothing:antialiased;
   line-height:1.7;
   min-height:100vh;
-  overflow-x:hidden;
 }
 ::selection{background:var(--saffron);color:var(--ink)}
 
-/* textura sutil de pontos */
-body::before{
-  content:"";
-  position:fixed;inset:0;
-  background-image:radial-gradient(rgba(203,162,75,.14) 1px, transparent 1px);
-  background-size:26px 26px;
-  pointer-events:none;
-  opacity:.35;
-  z-index:0;
-}
-
 .wrap{
   position:relative;
-  z-index:1;
   max-width:var(--maxw);
   margin:0 auto;
-  padding:56px 24px 64px;
+  padding:0 20px 56px;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  margin:0 -20px 26px;
+  min-height:300px;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  justify-content:flex-end;
+  padding:70px 28px 30px;
   text-align:center;
-  min-height:100vh;
-  justify-content:center;
+  overflow:hidden;
 }
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:url('/img/hero.jpg') center/cover no-repeat;
+  transform:scale(1.05);
+  z-index:0;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(21,16,11,.55) 0%,
+    rgba(21,16,11,.35) 35%,
+    rgba(21,16,11,.85) 85%,
+    var(--ink) 100%);
+  z-index:1;
+}
+.hero > *{position:relative;z-index:2}
 
-/* marca */
 .brand{
   font-family:var(--serif);
-  font-size:.85rem;
+  font-size:.82rem;
   letter-spacing:.28em;
   text-transform:uppercase;
-  color:var(--text-light-soft);
-  margin-bottom:32px;
+  color:var(--bone);
+  margin-bottom:14px;
 }
-.brand span{color:var(--saffron)}
+.brand span{color:var(--saffron-soft)}
 
-/* selo do evento */
 .tag{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  font-size:.68rem;
+  align-self:center;
+  font-size:.66rem;
   letter-spacing:.16em;
   text-transform:uppercase;
-  color:var(--saffron);
+  color:var(--saffron-soft);
   font-weight:600;
-  border:1px solid var(--line-gold);
+  background:rgba(21,16,11,.4);
+  border:1px solid rgba(203,162,75,.35);
   border-radius:999px;
-  padding:7px 16px;
-  margin-bottom:24px;
+  padding:6px 14px;
+  margin-bottom:14px;
+  backdrop-filter:blur(4px);
 }
 .tag .dot{
   width:6px;height:6px;border-radius:50%;
   background:var(--saffron);
-  box-shadow:0 0 0 3px rgba(232,147,46,.2);
+  box-shadow:0 0 0 3px rgba(232,147,46,.25);
 }
 
 h1{
   font-family:var(--serif);
   font-weight:400;
   font-style:italic;
-  font-size:clamp(2.1rem,6vw,3rem);
-  line-height:1.15;
+  font-size:clamp(1.9rem,5.4vw,2.8rem);
+  line-height:1.14;
   color:var(--bone);
-  margin-bottom:20px;
-  max-width:560px;
+  text-shadow:0 2px 20px rgba(0,0,0,.5);
+  max-width:520px;
+  margin:0 auto;
 }
 h1 em{color:var(--saffron-soft);font-style:italic}
 
 .sub{
-  font-size:1.02rem;
+  font-size:1rem;
   color:var(--text-light-soft);
-  max-width:470px;
-  margin:0 auto;
+  max-width:480px;
+  margin:0 auto 22px;
   font-weight:300;
+  text-align:center;
 }
 .sub strong{color:var(--parch);font-weight:500}
 
-.divider{
-  color:var(--line-gold);
-  font-family:var(--serif);
-  letter-spacing:.5em;
-  font-size:.9rem;
-  margin:30px auto;
-  user-select:none;
-}
-
-/* benefícios */
-.beneficios{
-  list-style:none;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  margin:0 auto 36px;
-  text-align:left;
-  width:100%;
-  max-width:420px;
-}
-.beneficios li{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  font-size:.94rem;
-  color:var(--text-light-soft);
-  font-weight:300;
-}
-.beneficios li::before{
-  content:"✦";
-  color:var(--gold);
-  font-size:.85rem;
-  line-height:1.6;
-  flex-shrink:0;
-}
-.beneficios strong{color:var(--parch);font-weight:500}
-
-/* card do formulário */
+/* CARD / FORM */
 .card{
   width:100%;
   max-width:440px;
-  background:linear-gradient(180deg,rgba(244,236,218,.05),rgba(244,236,218,.02));
+  margin:0 auto;
+  background:linear-gradient(180deg,rgba(244,236,218,.06),rgba(244,236,218,.02));
   border:1px solid var(--line-gold);
   border-radius:18px;
-  padding:32px 28px;
-  backdrop-filter:blur(6px);
+  padding:28px 26px;
   box-shadow:0 20px 60px -20px rgba(0,0,0,.6);
 }
-
-.field{
-  margin-bottom:16px;
-  text-align:left;
+.card-title{
+  font-family:var(--serif);
+  font-size:1.1rem;
+  color:var(--bone);
+  text-align:center;
+  margin-bottom:18px;
 }
+.field{margin-bottom:15px;text-align:left}
 .field label{
   display:block;
-  font-size:.68rem;
+  font-size:.67rem;
   letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--text-light-soft);
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 .field input{
   width:100%;
@@ -192,17 +172,9 @@ h1 em{color:var(--saffron-soft);font-style:italic}
   transition:border-color .2s ease, box-shadow .2s ease;
 }
 .field input::placeholder{color:var(--text-light-soft);opacity:.55}
-.field input:focus{
-  border-color:var(--saffron);
-  box-shadow:0 0 0 3px rgba(232,147,46,.15);
-}
+.field input:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,147,46,.15)}
 .field input.error{border-color:var(--vermilion)}
-.field .msg{
-  font-size:.74rem;
-  color:var(--saffron-soft);
-  margin-top:6px;
-  min-height:14px;
-}
+.field .msg{font-size:.74rem;color:var(--saffron-soft);margin-top:6px;min-height:14px}
 
 .hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
 
@@ -217,7 +189,6 @@ h1 em{color:var(--saffron-soft);font-style:italic}
   font-family:var(--sans);
   font-weight:600;
   font-size:.95rem;
-  letter-spacing:.02em;
   cursor:pointer;
   transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
   box-shadow:0 12px 30px -10px rgba(232,147,46,.5);
@@ -226,39 +197,79 @@ h1 em{color:var(--saffron-soft);font-style:italic}
 .btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.6;cursor:default;transform:none}
 
-.trust{
-  margin-top:16px;
-  font-size:.72rem;
-  color:var(--text-light-soft);
-  opacity:.75;
+.trust{margin-top:14px;font-size:.72rem;color:var(--text-light-soft);opacity:.75;text-align:center}
+
+.state{display:none;text-align:center}
+.state.active{display:block}
+.state-icon{font-family:var(--serif);font-size:2.2rem;color:var(--saffron);margin-bottom:12px}
+.state h2{font-family:var(--serif);font-weight:400;font-size:1.4rem;color:var(--bone);margin-bottom:10px}
+.state p{font-size:.92rem;color:var(--text-light-soft);font-weight:300}
+
+.divider{
+  color:var(--line-gold);
+  font-family:var(--serif);
+  letter-spacing:.5em;
+  font-size:.9rem;
+  text-align:center;
+  margin:34px auto 26px;
+  user-select:none;
 }
 
-.state{
-  display:none;
-  text-align:center;
+/* BENEFÍCIOS */
+.beneficios{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin:0 auto 30px;
+  text-align:left;
+  width:100%;
+  max-width:440px;
 }
-.state.active{display:block}
-.state-icon{
-  font-family:var(--serif);
-  font-size:2.2rem;
-  color:var(--saffron);
-  margin-bottom:12px;
+.beneficios li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:.94rem;color:var(--text-light-soft);font-weight:300;
 }
-.state h2{
-  font-family:var(--serif);
-  font-weight:400;
-  font-size:1.4rem;
+.beneficios li::before{content:"✦";color:var(--gold);font-size:.85rem;line-height:1.6;flex-shrink:0}
+.beneficios strong{color:var(--parch);font-weight:500}
+
+/* GALERIA */
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  max-width:520px;
+  margin:0 auto 12px;
+}
+.galeria figure{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--line-gold);
+  aspect-ratio:1/1;
+}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
+.galeria figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:14px 8px 7px;
+  font-size:.66rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
   color:var(--bone);
-  margin-bottom:10px;
+  text-align:center;
+  background:linear-gradient(180deg,transparent,rgba(21,16,11,.85));
 }
-.state p{
-  font-size:.92rem;
+.galeria-legenda{
+  text-align:center;
+  font-size:.72rem;
   color:var(--text-light-soft);
-  font-weight:300;
+  opacity:.7;
+  margin-bottom:8px;
 }
 
 footer{
-  margin-top:40px;
+  margin-top:34px;
+  text-align:center;
   font-size:.7rem;
   color:var(--text-light-soft);
   opacity:.6;
@@ -266,8 +277,8 @@ footer{
 }
 
 @media (max-width:480px){
-  .wrap{padding:40px 20px 48px}
-  .card{padding:26px 20px}
+  .hero{min-height:230px;padding:52px 20px 24px;margin-bottom:22px}
+  .card{padding:24px 18px}
 }
 </style>
 </head>
@@ -275,30 +286,23 @@ footer{
 
 <div class="wrap">
 
-  <div class="brand">YĀTRA <span>· ÍNDIA 2026</span></div>
-
-  <div class="tag"><span class="dot"></span>100% online · 100% gratuito</div>
-
-  <h1>Preparando sua <em>viagem espiritual</em> à Índia</h1>
+  <header class="hero">
+    <div class="brand">YĀTRA <span>· ÍNDIA &amp; NEPAL 2026</span></div>
+    <div class="tag"><span class="dot"></span>Evento ao vivo · 100% gratuito</div>
+    <h1>Preparando sua <em>viagem espiritual</em> à Índia</h1>
+  </header>
 
   <p class="sub">
-    Se você deseja aprender o que fazer e o que nunca fazer numa viagem
-    para a Índia e o Nepal — e ainda receber um roteiro incrível com a
-    minha curadoria — se inscreva para o evento ao vivo,
+    Aprenda o que fazer e o que nunca fazer numa viagem para a Índia e o
+    Nepal — e receba um roteiro com a minha curadoria. Ao vivo e online,
     <strong>dia 30/07 às 19h30</strong>.
   </p>
-
-  <div class="divider">· · ·</div>
-
-  <ul class="beneficios">
-    <li><span><strong>O que fazer</strong> — o passo a passo pra chegar preparado, física e espiritualmente, pra Índia sagrada.</span></li>
-    <li><span><strong>O que nunca fazer</strong> — os deslizes culturais e espirituais que todo peregrino de primeira viagem comete (e como não repetir).</span></li>
-    <li><span><strong>Um roteiro com curadoria de 16 dias</strong> — cada templo, cada parada, pensado pra sua jornada interior, não só turística.</span></li>
-  </ul>
 
   <div class="card">
 
     <form id="form-yatra" class="state active" novalidate>
+      <div class="card-title">Garanta sua vaga gratuita</div>
+
       <div class="field">
         <label for="email">Seu melhor e-mail</label>
         <input type="email" id="email" name="email" placeholder="seunome@email.com" required autocomplete="email"/>
@@ -311,18 +315,16 @@ footer{
         <div class="msg" id="msg-whatsapp"></div>
       </div>
 
-      <!-- honeypot anti-spam -->
       <input type="text" name="empresa" class="hp" tabindex="-1" autocomplete="off"/>
 
       <button type="submit" class="btn" id="btn-submit">Quero participar do evento ao vivo</button>
-
       <p class="trust">Sem spam. Seus dados são usados só para falar sobre a Yātra.</p>
     </form>
 
     <div class="state" id="state-success">
       <div class="state-icon">✦</div>
       <h2>Sua vaga está garantida.</h2>
-      <p>Enviamos o link e os lembretes do evento ao vivo por e-mail e WhatsApp. Nos vemos dia 30/07 às 19h30. Namastê. 🙏</p>
+      <p>Enviamos o link e os lembretes do evento por e-mail e WhatsApp. Nos vemos dia 30/07 às 19h30. Namastê. 🙏</p>
     </div>
 
     <div class="state" id="state-error">
@@ -333,7 +335,22 @@ footer{
 
   </div>
 
-  <footer>Yātra · Índia 2026 — uma jornada de preparação espiritual</footer>
+  <div class="divider">· · ·</div>
+
+  <ul class="beneficios">
+    <li><span><strong>O que fazer</strong> — o passo a passo pra chegar preparado, física e espiritualmente, pra Índia sagrada.</span></li>
+    <li><span><strong>O que nunca fazer</strong> — os deslizes culturais e espirituais que todo peregrino de primeira viagem comete.</span></li>
+    <li><span><strong>Um roteiro com curadoria de 16 dias</strong> — cada templo, cada parada, pensado pra sua jornada interior.</span></li>
+  </ul>
+
+  <div class="galeria">
+    <figure><img src="/img/nepal.jpg" alt="Boudhanath, Nepal" loading="lazy"/><figcaption>Nepal</figcaption></figure>
+    <figure><img src="/img/varanasi.jpg" alt="Kashi Vishwanath, Varanasi" loading="lazy"/><figcaption>Varanasi</figcaption></figure>
+    <figure><img src="/img/haridwar.jpg" alt="Har Ki Pauri, Haridwar" loading="lazy"/><figcaption>Haridwar</figcaption></figure>
+  </div>
+  <div class="galeria-legenda">Alguns dos destinos sagrados da jornada</div>
+
+  <footer>Yātra · Índia &amp; Nepal 2026 — uma jornada de preparação espiritual</footer>
 
 </div>
 
@@ -348,66 +365,29 @@ footer{
   var stateSuccess = document.getElementById('state-success');
   var stateError = document.getElementById('state-error');
 
-  // ==========================================================
-  // ENDPOINT DO FORMULÁRIO
-  // Aponta pra função serverless /api/subscribe.js (Vercel), que
-  // cria o contato direto na Brevo usando BREVO_API_KEY (variável
-  // de ambiente configurada no painel da Vercel).
-  // ==========================================================
   var FORM_ENDPOINT = "/api/subscribe";
 
-  // máscara simples de telefone BR
   waInput.addEventListener('input', function(){
     var v = waInput.value.replace(/\D/g,'').slice(0,11);
-    if(v.length > 6){
-      v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
-    } else if(v.length > 2){
-      v = '(' + v.slice(0,2) + ') ' + v.slice(2);
-    } else if(v.length > 0){
-      v = '(' + v;
-    }
+    if(v.length > 6){ v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7); }
+    else if(v.length > 2){ v = '(' + v.slice(0,2) + ') ' + v.slice(2); }
+    else if(v.length > 0){ v = '(' + v; }
     waInput.value = v;
   });
 
-  function isValidEmail(v){
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-  }
-  function isValidPhone(v){
-    return v.replace(/\D/g,'').length >= 10;
-  }
-
-  function setError(input, msgEl, text){
-    input.classList.add('error');
-    msgEl.textContent = text;
-  }
-  function clearError(input, msgEl){
-    input.classList.remove('error');
-    msgEl.textContent = '';
-  }
+  function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function isValidPhone(v){ return v.replace(/\D/g,'').length >= 10; }
+  function setError(input, msgEl, text){ input.classList.add('error'); msgEl.textContent = text; }
+  function clearError(input, msgEl){ input.classList.remove('error'); msgEl.textContent = ''; }
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var ok = true;
-
-    if(!isValidEmail(emailInput.value.trim())){
-      setError(emailInput, msgEmail, 'Digite um e-mail válido.');
-      ok = false;
-    } else {
-      clearError(emailInput, msgEmail);
-    }
-
-    if(!isValidPhone(waInput.value)){
-      setError(waInput, msgWa, 'Digite um WhatsApp válido, com DDD.');
-      ok = false;
-    } else {
-      clearError(waInput, msgWa);
-    }
-
-    // honeypot
-    if(form.empresa && form.empresa.value){
-      return;
-    }
-
+    if(!isValidEmail(emailInput.value.trim())){ setError(emailInput, msgEmail, 'Digite um e-mail válido.'); ok = false; }
+    else { clearError(emailInput, msgEmail); }
+    if(!isValidPhone(waInput.value)){ setError(waInput, msgWa, 'Digite um WhatsApp válido, com DDD.'); ok = false; }
+    else { clearError(waInput, msgWa); }
+    if(form.empresa && form.empresa.value){ return; }
     if(!ok) return;
 
     btn.disabled = true;
@@ -424,12 +404,8 @@ footer{
       headers: {'Content-Type':'application/json','Accept':'application/json'},
       body: JSON.stringify(payload)
     }).then(function(res){
-      if(res.ok){
-        form.classList.remove('active');
-        stateSuccess.classList.add('active');
-      } else {
-        throw new Error('Falha no envio');
-      }
+      if(res.ok){ form.classList.remove('active'); stateSuccess.classList.add('active'); }
+      else { throw new Error('Falha no envio'); }
     }).catch(function(){
       btn.disabled = false;
       btn.textContent = 'Quero participar do evento ao vivo';
