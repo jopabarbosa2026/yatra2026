@@ -4,9 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Yātra — Preparando sua viagem espiritual à Índia</title>
-<meta name="description" content="Entre na lista da Yātra e receba, em primeira mão, o roteiro, as datas e a preparação espiritual para a viagem à Índia."/>
+<meta name="description" content="Evento ao vivo e gratuito: o que fazer e o que nunca fazer numa viagem à Índia e ao Nepal, com um roteiro de curadoria. Dia 30/07 às 19h30."/>
 <meta property="og:title" content="Yātra: preparando sua viagem espiritual à Índia"/>
-<meta property="og:description" content="Deixe seu e-mail e WhatsApp para receber os bastidores e os primeiros avisos da nossa peregrinação à Índia."/>
+<meta property="og:description" content="Evento ao vivo e gratuito, dia 30/07 às 19h30. O que fazer, o que nunca fazer e um roteiro de curadoria para sua viagem à Índia e ao Nepal."/>
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -40,7 +40,7 @@ body{
 }
 ::selection{background:var(--saffron);color:var(--ink)}
 
-/* faint dot texture */
+/* textura sutil de pontos */
 body::before{
   content:"";
   position:fixed;inset:0;
@@ -65,24 +65,36 @@ body::before{
   justify-content:center;
 }
 
-/* brand mark */
+/* marca */
 .brand{
   font-family:var(--serif);
   font-size:.85rem;
   letter-spacing:.28em;
   text-transform:uppercase;
   color:var(--text-light-soft);
-  margin-bottom:40px;
+  margin-bottom:32px;
 }
 .brand span{color:var(--saffron)}
 
-.label{
+/* selo do evento */
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
   font-size:.68rem;
-  letter-spacing:.35em;
+  letter-spacing:.16em;
   text-transform:uppercase;
   color:var(--saffron);
   font-weight:600;
-  margin-bottom:22px;
+  border:1px solid var(--line-gold);
+  border-radius:999px;
+  padding:7px 16px;
+  margin-bottom:24px;
+}
+.tag .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--saffron);
+  box-shadow:0 0 0 3px rgba(232,147,46,.2);
 }
 
 h1{
@@ -92,7 +104,7 @@ h1{
   font-size:clamp(2.1rem,6vw,3rem);
   line-height:1.15;
   color:var(--bone);
-  margin-bottom:22px;
+  margin-bottom:20px;
   max-width:560px;
 }
 h1 em{color:var(--saffron-soft);font-style:italic}
@@ -100,27 +112,28 @@ h1 em{color:var(--saffron-soft);font-style:italic}
 .sub{
   font-size:1.02rem;
   color:var(--text-light-soft);
-  max-width:460px;
-  margin:0 auto 36px;
+  max-width:470px;
+  margin:0 auto;
   font-weight:300;
 }
+.sub strong{color:var(--parch);font-weight:500}
 
 .divider{
   color:var(--line-gold);
   font-family:var(--serif);
   letter-spacing:.5em;
   font-size:.9rem;
-  margin:0 auto 36px;
+  margin:30px auto;
   user-select:none;
 }
 
-/* benefits */
+/* benefícios */
 .beneficios{
   list-style:none;
   display:flex;
   flex-direction:column;
   gap:14px;
-  margin:0 auto 40px;
+  margin:0 auto 36px;
   text-align:left;
   width:100%;
   max-width:420px;
@@ -142,7 +155,7 @@ h1 em{color:var(--saffron-soft);font-style:italic}
 }
 .beneficios strong{color:var(--parch);font-weight:500}
 
-/* form card */
+/* card do formulário */
 .card{
   width:100%;
   max-width:440px;
@@ -245,7 +258,7 @@ h1 em{color:var(--saffron-soft);font-style:italic}
 }
 
 footer{
-  margin-top:48px;
+  margin-top:40px;
   font-size:.7rem;
   color:var(--text-light-soft);
   opacity:.6;
@@ -264,16 +277,16 @@ footer{
 
   <div class="brand">YĀTRA <span>· ÍNDIA 2026</span></div>
 
+  <div class="tag"><span class="dot"></span>100% online · 100% gratuito</div>
+
   <h1>Preparando sua <em>viagem espiritual</em> à Índia</h1>
 
   <p class="sub">
     Se você deseja aprender o que fazer e o que nunca fazer numa viagem
     para a Índia e o Nepal — e ainda receber um roteiro incrível com a
-    minha curadoria — se inscreva para participar do evento ao vivo,
-    dia 30/07 às 19h30.
+    minha curadoria — se inscreva para o evento ao vivo,
+    <strong>dia 30/07 às 19h30</strong>.
   </p>
-
-  <div class="label">100% online · 100% gratuito</div>
 
   <div class="divider">· · ·</div>
 
@@ -301,15 +314,15 @@ footer{
       <!-- honeypot anti-spam -->
       <input type="text" name="empresa" class="hp" tabindex="-1" autocomplete="off"/>
 
-      <button type="submit" class="btn" id="btn-submit">Quero entrar na lista da Yātra</button>
+      <button type="submit" class="btn" id="btn-submit">Quero participar do evento ao vivo</button>
 
       <p class="trust">Sem spam. Seus dados são usados só para falar sobre a Yātra.</p>
     </form>
 
     <div class="state" id="state-success">
       <div class="state-icon">✦</div>
-      <h2>Você está na lista.</h2>
-      <p>Em breve você recebe os primeiros bastidores da Yātra por e-mail e WhatsApp. Namastê. 🙏</p>
+      <h2>Sua vaga está garantida.</h2>
+      <p>Enviamos o link e os lembretes do evento ao vivo por e-mail e WhatsApp. Nos vemos dia 30/07 às 19h30. Namastê. 🙏</p>
     </div>
 
     <div class="state" id="state-error">
@@ -419,7 +432,7 @@ footer{
       }
     }).catch(function(){
       btn.disabled = false;
-      btn.textContent = 'Quero entrar na lista da Yātra';
+      btn.textContent = 'Quero participar do evento ao vivo';
       form.classList.remove('active');
       stateError.classList.add('active');
     });
