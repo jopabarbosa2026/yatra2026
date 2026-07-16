@@ -29,6 +29,16 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error: 'WhatsApp inválido.' });
     }
 
+    // Brevo exige o WHATSAPP em formato internacional (E.164), só dígitos
+    // com o "+" na frente, ex: +5511987654321. Nosso input só tem o
+    // formato nacional (DDD + número), então adicionamos o código do
+    // Brasil (55) quando ele ainda não estiver presente.
+    var waDigits = whatsapp.replace(/\D/g, '');
+    if (waDigits.length <= 11) {
+      waDigits = '55' + waDigits;
+    }
+    var whatsappE164 = '+' + waDigits;
+
     const apiKey = process.env.BREVO_API_KEY;
     const listId = process.env.BREVO_LIST_ID;
 
@@ -46,7 +56,7 @@ module.exports = async function handler(req, res) {
       },
       body: JSON.stringify({
         email: email,
-        attributes: { WHATSAPP: whatsapp },
+        attributes: { WHATSAPP: whatsappE164 },
         listIds: [Number(listId)],
         updateEnabled: true
       })
