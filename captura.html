@@ -64,27 +64,12 @@ h1 em{color:var(--saffron-soft);font-style:italic}
 .sub{font-size:1rem;color:var(--text-light-soft);max-width:480px;margin:0 auto 30px;font-weight:300}
 .sub strong{color:var(--parch);font-weight:500}
 
-.card{width:100%;max-width:440px;margin:0 auto;text-align:left;background:linear-gradient(180deg,rgba(244,236,218,.06),rgba(244,236,218,.02));border:1px solid var(--line-gold);border-radius:18px;padding:28px 26px;box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
-.card-title{font-family:var(--serif);font-size:1.1rem;color:var(--bone);text-align:center;margin-bottom:18px}
-.field{margin-bottom:15px}
-.field label{display:block;font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light-soft);margin-bottom:7px}
-.field input{width:100%;padding:14px 16px;background:rgba(21,16,11,.5);border:1px solid var(--line-gold);border-radius:10px;color:var(--bone);font-family:var(--sans);font-size:.96rem;outline:none;transition:border-color .2s,box-shadow .2s}
-.field input::placeholder{color:var(--text-light-soft);opacity:.55}
-.field input:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,147,46,.15)}
-.field input.error{border-color:var(--vermilion)}
-.field .msg{font-size:.74rem;color:var(--saffron-soft);margin-top:6px;min-height:14px}
-.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
-.btn{width:100%;padding:16px 20px;margin-top:6px;background:linear-gradient(135deg,var(--saffron),var(--vermilion));color:var(--ink);border:none;border-radius:10px;font-family:var(--sans);font-weight:600;font-size:.95rem;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .15s;box-shadow:0 12px 30px -10px rgba(232,147,46,.5)}
+.card{width:100%;max-width:440px;margin:0 auto;text-align:center;background:linear-gradient(180deg,rgba(244,236,218,.06),rgba(244,236,218,.02));border:1px solid var(--line-gold);border-radius:18px;padding:32px 26px;box-shadow:0 20px 60px -20px rgba(0,0,0,.6)}
+.card-title{font-family:var(--serif);font-size:1.1rem;color:var(--bone);text-align:center;margin-bottom:20px}
+.btn{display:inline-block;width:100%;padding:18px 20px;background:linear-gradient(135deg,var(--saffron),var(--vermilion));color:var(--ink);border:none;border-radius:10px;font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 12px 30px -10px rgba(232,147,46,.5)}
 .btn:hover{transform:translateY(-1px);box-shadow:0 16px 36px -10px rgba(232,147,46,.6)}
 .btn:active{transform:translateY(0)}
-.btn:disabled{opacity:.6;cursor:default;transform:none}
 .trust{margin-top:14px;font-size:.72rem;color:var(--text-light-soft);opacity:.75;text-align:center}
-.state{display:none}
-.state.active{display:block}
-.state[id]{text-align:center}
-.state-icon{font-family:var(--serif);font-size:2.2rem;color:var(--saffron);margin-bottom:12px}
-.state h2{font-family:var(--serif);font-weight:400;font-size:1.4rem;color:var(--bone);margin-bottom:10px}
-.state p{font-size:.92rem;color:var(--text-light-soft);font-weight:300}
 
 .divider{color:var(--line-gold);font-family:var(--serif);letter-spacing:.5em;font-size:.9rem;text-align:center;margin:34px auto 26px;user-select:none}
 .beneficios{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0 auto;text-align:left;width:100%;max-width:440px}
@@ -108,32 +93,9 @@ footer{margin-top:40px;text-align:center;font-size:.7rem;color:var(--text-light-
   </p>
 
   <div class="card">
-    <form id="form-yatra" class="state active" novalidate>
-      <div class="card-title">Garanta sua vaga gratuita</div>
-      <div class="field">
-        <label for="email">Seu melhor e-mail</label>
-        <input type="email" id="email" name="email" placeholder="seuemail@email.com" required autocomplete="email"/>
-        <div class="msg" id="msg-email"></div>
-      </div>
-      <div class="field">
-        <label for="whatsapp">WhatsApp (com DDD)</label>
-        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 91234-5678" required inputmode="numeric" autocomplete="tel"/>
-        <div class="msg" id="msg-whatsapp"></div>
-      </div>
-      <input type="text" name="empresa" class="hp" tabindex="-1" autocomplete="off"/>
-      <button type="submit" class="btn" id="btn-submit">Quero participar do evento ao vivo</button>
-      <p class="trust">Sem spam. Seus dados sao usados so para falar sobre a Yatra.</p>
-    </form>
-    <div class="state" id="state-success">
-      <div class="state-icon">&#10022;</div>
-      <h2>Sua vaga esta garantida.</h2>
-      <p>Estamos te levando ao grupo do WhatsApp com os detalhes do evento. Se nao abrir, <a href="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0" style="color:var(--saffron-soft)">toque aqui para entrar</a>. 🙏</p>
-    </div>
-    <div class="state" id="state-error">
-      <div class="state-icon">&#10022;</div>
-      <h2>Algo nao saiu como esperado.</h2>
-      <p>Tente novamente em instantes, ou nos chame diretamente pelo WhatsApp.</p>
-    </div>
+    <div class="card-title">Garanta sua vaga gratuita</div>
+    <a class="btn" id="btn-whatsapp" href="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&amp;p=i&amp;ilr=4&amp;amv=0" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+    <p class="trust">Voce recebera todos os detalhes do evento diretamente no grupo.</p>
   </div>
 
   <div class="divider">&middot; &middot; &middot;</div>
@@ -149,42 +111,9 @@ footer{margin-top:40px;text-align:center;font-size:.7rem;color:var(--text-light-
 
 <script>
 (function(){
-  var form=document.getElementById('form-yatra'),btn=document.getElementById('btn-submit'),
-  emailInput=document.getElementById('email'),waInput=document.getElementById('whatsapp'),
-  msgEmail=document.getElementById('msg-email'),msgWa=document.getElementById('msg-whatsapp'),
-  stateSuccess=document.getElementById('state-success'),stateError=document.getElementById('state-error');
-  var FORM_ENDPOINT="/api/subscribe";
-  var WHATSAPP_GROUP="https://chat.whatsapp.com/GvBpANERpGOCPS0x6lmEqm?s=cl&p=i&ilr=4&amv=0";
-  waInput.addEventListener('input',function(){
-    var v=waInput.value.replace(/\D/g,'').slice(0,11);
-    if(v.length>6){v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);}
-    else if(v.length>2){v='('+v.slice(0,2)+') '+v.slice(2);}
-    else if(v.length>0){v='('+v;}
-    waInput.value=v;
-  });
-  function isValidEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
-  function isValidPhone(v){return v.replace(/\D/g,'').length>=10;}
-  function setError(i,m,t){i.classList.add('error');m.textContent=t;}
-  function clearError(i,m){i.classList.remove('error');m.textContent='';}
-  form.addEventListener('submit',function(e){
-    e.preventDefault();var ok=true;
-    if(!isValidEmail(emailInput.value.trim())){setError(emailInput,msgEmail,'Digite um e-mail valido.');ok=false;}else{clearError(emailInput,msgEmail);}
-    if(!isValidPhone(waInput.value)){setError(waInput,msgWa,'Digite um WhatsApp valido, com DDD.');ok=false;}else{clearError(waInput,msgWa);}
-    if(form.empresa&&form.empresa.value){return;}
-    if(!ok)return;
-    btn.disabled=true;btn.textContent='Enviando...';
-    var payload={email:emailInput.value.trim(),whatsapp:waInput.value.trim(),origem:'captura-yatra-india-2026'};
-    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
-    .then(function(res){
-      if(res.ok){
-        if(typeof fbq==='function'){fbq('track','Lead',{content_name:'Cadastro Yatra Evento 30-07'});}
-        form.classList.remove('active');stateSuccess.classList.add('active');
-        setTimeout(function(){window.location.href=WHATSAPP_GROUP;},1200);
-      }else{throw new Error('fail');}
-    }).catch(function(){
-      btn.disabled=false;btn.textContent='Quero participar do evento ao vivo';
-      form.classList.remove('active');stateError.classList.add('active');
-    });
+  var link=document.getElementById('btn-whatsapp');
+  link.addEventListener('click',function(){
+    if(typeof fbq==='function'){fbq('track','Lead',{content_name:'Clique WhatsApp Yatra Evento 30-07'});}
   });
 })();
 </script>
